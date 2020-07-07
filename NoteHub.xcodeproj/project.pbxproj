@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB73E48024B457030070B781 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* NoteApp.swift */; };
-		CB73E48124B457030070B781 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* NoteApp.swift */; };
+		CB73E48024B457030070B781 /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* NoteHubApp.swift */; };
+		CB73E48124B457030070B781 /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* NoteHubApp.swift */; };
 		CB73E48224B457030070B781 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46E24B457010070B781 /* ContentView.swift */; };
 		CB73E48324B457030070B781 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46E24B457010070B781 /* ContentView.swift */; };
 		CB73E48424B457030070B781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB73E46F24B457030070B781 /* Assets.xcassets */; };
@@ -28,12 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB73E46D24B457010070B781 /* NoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteApp.swift; sourceTree = "<group>"; };
+		CB73E46D24B457010070B781 /* NoteHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHubApp.swift; sourceTree = "<group>"; };
 		CB73E46E24B457010070B781 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB73E46F24B457030070B781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB73E47424B457030070B781 /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB73E47424B457030070B781 /* NoteHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB73E47724B457030070B781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB73E47C24B457030070B781 /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB73E47C24B457030070B781 /* NoteHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB73E47E24B457030070B781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB73E47F24B457030070B781 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		CB73E48E24B4710A0070B781 /* Note.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Note.entitlements; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		CB73E46C24B457010070B781 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CB73E46D24B457010070B781 /* NoteApp.swift */,
+				CB73E46D24B457010070B781 /* NoteHubApp.swift */,
 				CB73E46E24B457010070B781 /* ContentView.swift */,
 				CB73E46F24B457030070B781 /* Assets.xcassets */,
 				CB73E49924B4955D0070B781 /* PurchasesStore.swift */,
@@ -97,8 +97,8 @@
 		CB73E47524B457030070B781 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB73E47424B457030070B781 /* Note.app */,
-				CB73E47C24B457030070B781 /* Note.app */,
+				CB73E47424B457030070B781 /* NoteHub.app */,
+				CB73E47C24B457030070B781 /* NoteHub.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 				CB73E49524B4945F0070B781 /* Purchases */,
 			);
 			productName = iOS;
-			productReference = CB73E47424B457030070B781 /* Note.app */;
+			productReference = CB73E47424B457030070B781 /* NoteHub.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CB73E47B24B457030070B781 /* macOS */ = {
@@ -172,7 +172,7 @@
 				CB73E49724B4947B0070B781 /* Purchases */,
 			);
 			productName = macOS;
-			productReference = CB73E47C24B457030070B781 /* Note.app */;
+			productReference = CB73E47C24B457030070B781 /* NoteHub.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CB73E46B24B457000070B781 /* Build configuration list for PBXProject "Note" */;
+			buildConfigurationList = CB73E46B24B457000070B781 /* Build configuration list for PBXProject "NoteHub" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -241,7 +241,7 @@
 				CB73E4A024B498680070B781 /* SettingsView.swift in Sources */,
 				CB73E48224B457030070B781 /* ContentView.swift in Sources */,
 				CB73E49D24B495F60070B781 /* SubscriptionSplashScreen.swift in Sources */,
-				CB73E48024B457030070B781 /* NoteApp.swift in Sources */,
+				CB73E48024B457030070B781 /* NoteHubApp.swift in Sources */,
 				CB73E49A24B4955D0070B781 /* PurchasesStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,7 +253,7 @@
 				CB73E4A124B498680070B781 /* SettingsView.swift in Sources */,
 				CB73E48324B457030070B781 /* ContentView.swift in Sources */,
 				CB73E49E24B495F60070B781 /* SubscriptionSplashScreen.swift in Sources */,
-				CB73E48124B457030070B781 /* NoteApp.swift in Sources */,
+				CB73E48124B457030070B781 /* NoteHubApp.swift in Sources */,
 				CB73E49B24B4955D0070B781 /* PurchasesStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +388,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
-				PRODUCT_NAME = Note;
+				PRODUCT_NAME = NoteHub;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,7 +411,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
-				PRODUCT_NAME = Note;
+				PRODUCT_NAME = NoteHub;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,7 +437,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
-				PRODUCT_NAME = Note;
+				PRODUCT_NAME = NoteHub;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -461,7 +461,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
-				PRODUCT_NAME = Note;
+				PRODUCT_NAME = NoteHub;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -470,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB73E46B24B457000070B781 /* Build configuration list for PBXProject "Note" */ = {
+		CB73E46B24B457000070B781 /* Build configuration list for PBXProject "NoteHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB73E48624B457030070B781 /* Debug */,

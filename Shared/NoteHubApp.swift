@@ -1,5 +1,5 @@
 //
-//  NoteApp.swift
+//  NoteHubApp.swift
 //  Shared
 //
 //  Created by Дмитрий Лисин on 07.07.2020.
@@ -20,11 +20,6 @@ struct NoteApp: App {
         WindowGroup {
             ContentView()
         }
-        #if targetEnvironment(macCatalyst)
-        Settings {
-            SettingsView()
-        }
-        #endif
     }
 }
 
