@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB73E48024B457030070B781 /* CloudNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* CloudNoteApp.swift */; };
-		CB73E48124B457030070B781 /* CloudNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* CloudNoteApp.swift */; };
+		CB73E48024B457030070B781 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* NoteApp.swift */; };
+		CB73E48124B457030070B781 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46D24B457010070B781 /* NoteApp.swift */; };
 		CB73E48224B457030070B781 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46E24B457010070B781 /* ContentView.swift */; };
 		CB73E48324B457030070B781 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E46E24B457010070B781 /* ContentView.swift */; };
 		CB73E48424B457030070B781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB73E46F24B457030070B781 /* Assets.xcassets */; };
 		CB73E48524B457030070B781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB73E46F24B457030070B781 /* Assets.xcassets */; };
+		CB73E49124B471190070B781 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73E49024B471190070B781 /* CloudKit.framework */; };
+		CB73E49324B471460070B781 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73E49224B471460070B781 /* CloudKit.framework */; };
+		CB73E49624B4945F0070B781 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB73E49524B4945F0070B781 /* Purchases */; };
+		CB73E49824B4947B0070B781 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB73E49724B4947B0070B781 /* Purchases */; };
+		CB73E49A24B4955D0070B781 /* PurchasesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E49924B4955D0070B781 /* PurchasesStore.swift */; };
+		CB73E49B24B4955D0070B781 /* PurchasesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E49924B4955D0070B781 /* PurchasesStore.swift */; };
+		CB73E49D24B495F60070B781 /* SubscriptionSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E49C24B495F60070B781 /* SubscriptionSplashScreen.swift */; };
+		CB73E49E24B495F60070B781 /* SubscriptionSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E49C24B495F60070B781 /* SubscriptionSplashScreen.swift */; };
+		CB73E4A024B498680070B781 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E49F24B498680070B781 /* SettingsView.swift */; };
+		CB73E4A124B498680070B781 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73E49F24B498680070B781 /* SettingsView.swift */; };
+		CB73E4A324B49F590070B781 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73E4A224B49F590070B781 /* StoreKit.framework */; };
+		CB73E4A524B49F600070B781 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73E4A424B49F600070B781 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB73E46D24B457010070B781 /* CloudNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudNoteApp.swift; sourceTree = "<group>"; };
+		CB73E46D24B457010070B781 /* NoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteApp.swift; sourceTree = "<group>"; };
 		CB73E46E24B457010070B781 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB73E46F24B457030070B781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB73E47424B457030070B781 /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +36,14 @@
 		CB73E47C24B457030070B781 /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB73E47E24B457030070B781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB73E47F24B457030070B781 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CB73E48E24B4710A0070B781 /* Note.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Note.entitlements; sourceTree = "<group>"; };
+		CB73E49024B471190070B781 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		CB73E49224B471460070B781 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		CB73E49924B4955D0070B781 /* PurchasesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesStore.swift; sourceTree = "<group>"; };
+		CB73E49C24B495F60070B781 /* SubscriptionSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionSplashScreen.swift; sourceTree = "<group>"; };
+		CB73E49F24B498680070B781 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CB73E4A224B49F590070B781 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		CB73E4A424B49F600070B781 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB73E4A324B49F590070B781 /* StoreKit.framework in Frameworks */,
+				CB73E49124B471190070B781 /* CloudKit.framework in Frameworks */,
+				CB73E49624B4945F0070B781 /* Purchases in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB73E4A524B49F600070B781 /* StoreKit.framework in Frameworks */,
+				CB73E49324B471460070B781 /* CloudKit.framework in Frameworks */,
+				CB73E49824B4947B0070B781 /* Purchases in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,15 +77,19 @@
 				CB73E47624B457030070B781 /* iOS */,
 				CB73E47D24B457030070B781 /* macOS */,
 				CB73E47524B457030070B781 /* Products */,
+				CB73E48F24B471190070B781 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CB73E46C24B457010070B781 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CB73E46D24B457010070B781 /* CloudNoteApp.swift */,
+				CB73E46D24B457010070B781 /* NoteApp.swift */,
 				CB73E46E24B457010070B781 /* ContentView.swift */,
 				CB73E46F24B457030070B781 /* Assets.xcassets */,
+				CB73E49924B4955D0070B781 /* PurchasesStore.swift */,
+				CB73E49C24B495F60070B781 /* SubscriptionSplashScreen.swift */,
+				CB73E49F24B498680070B781 /* SettingsView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -76,6 +106,7 @@
 		CB73E47624B457030070B781 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CB73E48E24B4710A0070B781 /* Note.entitlements */,
 				CB73E47724B457030070B781 /* Info.plist */,
 			);
 			path = iOS;
@@ -88,6 +119,17 @@
 				CB73E47F24B457030070B781 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		CB73E48F24B471190070B781 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB73E4A424B49F600070B781 /* StoreKit.framework */,
+				CB73E4A224B49F590070B781 /* StoreKit.framework */,
+				CB73E49224B471460070B781 /* CloudKit.framework */,
+				CB73E49024B471190070B781 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +148,9 @@
 			dependencies = (
 			);
 			name = iOS;
+			packageProductDependencies = (
+				CB73E49524B4945F0070B781 /* Purchases */,
+			);
 			productName = iOS;
 			productReference = CB73E47424B457030070B781 /* Note.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +168,9 @@
 			dependencies = (
 			);
 			name = macOS;
+			packageProductDependencies = (
+				CB73E49724B4947B0070B781 /* Purchases */,
+			);
 			productName = macOS;
 			productReference = CB73E47C24B457030070B781 /* Note.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +201,9 @@
 				Base,
 			);
 			mainGroup = CB73E46724B457000070B781;
+			packageReferences = (
+				CB73E49424B4945F0070B781 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+			);
 			productRefGroup = CB73E47524B457030070B781 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB73E4A024B498680070B781 /* SettingsView.swift in Sources */,
 				CB73E48224B457030070B781 /* ContentView.swift in Sources */,
-				CB73E48024B457030070B781 /* CloudNoteApp.swift in Sources */,
+				CB73E49D24B495F60070B781 /* SubscriptionSplashScreen.swift in Sources */,
+				CB73E48024B457030070B781 /* NoteApp.swift in Sources */,
+				CB73E49A24B4955D0070B781 /* PurchasesStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB73E4A124B498680070B781 /* SettingsView.swift in Sources */,
 				CB73E48324B457030070B781 /* ContentView.swift in Sources */,
-				CB73E48124B457030070B781 /* CloudNoteApp.swift in Sources */,
+				CB73E49E24B495F60070B781 /* SubscriptionSplashScreen.swift in Sources */,
+				CB73E48124B457030070B781 /* NoteApp.swift in Sources */,
+				CB73E49B24B4955D0070B781 /* PurchasesStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/Note.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				ENABLE_PREVIEWS = YES;
@@ -342,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/Note.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				ENABLE_PREVIEWS = YES;
@@ -439,6 +498,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB73E49424B4945F0070B781 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB73E49524B4945F0070B781 /* Purchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB73E49424B4945F0070B781 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = Purchases;
+		};
+		CB73E49724B4947B0070B781 /* Purchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB73E49424B4945F0070B781 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = Purchases;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB73E46824B457000070B781 /* Project object */;
 }
