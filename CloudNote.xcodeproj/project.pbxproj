@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -145,7 +145,7 @@
 				};
 			};
 			buildConfigurationList = CB73E46B24B457000070B781 /* Build configuration list for PBXProject "CloudNote" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -329,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.CloudNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
 				PRODUCT_NAME = CloudNote;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -351,7 +351,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.CloudNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
 				PRODUCT_NAME = CloudNote;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -377,7 +377,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.CloudNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
 				PRODUCT_NAME = CloudNote;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -401,7 +401,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.CloudNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.note;
 				PRODUCT_NAME = CloudNote;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
