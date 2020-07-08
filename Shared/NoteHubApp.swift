@@ -15,7 +15,6 @@ struct NoteApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     #endif
     
-    @SceneBuilder
     var body: some Scene {
         WindowGroup {
             ContentView()

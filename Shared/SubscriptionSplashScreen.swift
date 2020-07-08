@@ -95,31 +95,17 @@ struct SubscriptionSplashScreen: View {
             HStack {
                 Button(action: purchasesStore.restoreSubscription) {
                     Text("Восстановить платеж")
-                        .font(.footnote)
-                        .foregroundColor(.purple)
                 }
                 Text("|")
-                    .font(.footnote)
-                    .foregroundColor(.purple)
-                Button(action: {
-//                    UIApplication.shared.open(URL(string: "https://studyhub.lisindmitriy.me/privacypolicy/")!)
-                }) {
-                    Text("Политика")
-                        .font(.footnote)
-                        .foregroundColor(.purple)
-                }
+                Link("Политика", destination: URL(string: "https://studyhub.lisindmitriy.me/privacypolicy/")!)
                 Text("|")
-                    .font(.footnote)
-                    .foregroundColor(.purple)
-                Button(action: {
-//                    UIApplication.shared.open(URL(string: "https://studyhub.lisindmitriy.me/privacypolicy/")!)
-                }) {
-                    Text("Правила")
-                        .font(.footnote)
-                        .foregroundColor(.purple)
-                }
-            }.padding(.vertical)
-        }.onAppear(perform: purchasesStore.fetchProduct)
+                Link("Правила", destination: URL(string: "https://studyhub.lisindmitriy.me/privacypolicy/")!)
+            }
+            .font(.footnote)
+            .foregroundColor(.purple)
+            .padding(.vertical)
+        }
+        .onAppear(perform: purchasesStore.fetchProduct)
     }
 }
 
@@ -131,7 +117,7 @@ struct SubscriptionTitleView: View {
                 .frame(width: 70, height: 70)
                 .foregroundColor(.accentColor)
             HStack {
-                Text("StudyHub")
+                Text("NoteHub")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 Text("Plus")
@@ -156,7 +142,8 @@ struct SubscriptionContainerView: View {
             InformationDetailView(title: "Тёмная тема", subTitle: "Темная тема теперь всегда! Конечно, если вы этого захотите)", imageName: "moon")
             InformationDetailView(title: "Удаление рекламы", subTitle: "Полное удаление рекламы из приложения.", imageName: "tag")
             InformationDetailView(title: "Поддержка", subTitle: "Оформляя подписку вы поддерживаете разработчика и позволяете развиваться приложению.", imageName: "heart")
-        }.padding(.horizontal)
+        }
+        .padding(.horizontal)
     }
 }
 
@@ -173,12 +160,10 @@ struct InformationDetailView: View {
                 .frame(width: 30)
                 .foregroundColor(.accentColor)
                 .padding()
-                .accessibility(hidden: true)
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.headline)
                     .foregroundColor(.primary)
-                    .accessibility(addTraits: .isHeader)
                 Text(subTitle)
                     .font(.body)
                     .foregroundColor(.secondary)
