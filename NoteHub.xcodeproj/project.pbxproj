@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		693212F8759C5DE26D3187CA /* Pods_NoteHub__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C436A24FE0E3A5A32F1C9B /* Pods_NoteHub__iOS_.framework */; };
-		93030052A9936A18E57ECF7C /* Pods_NoteHub__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46668DE1B32ED267636F30A /* Pods_NoteHub__macOS_.framework */; };
 		CBF26F8E25289454001C8B1A /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF26F7B25289451001C8B1A /* NoteHubApp.swift */; };
 		CBF26F8F25289454001C8B1A /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF26F7B25289451001C8B1A /* NoteHubApp.swift */; };
 		CBF26F9025289454001C8B1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF26F7C25289451001C8B1A /* ContentView.swift */; };
@@ -18,9 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25D8B79D24BA14AB55C48ABD /* Pods-NoteHub (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteHub (iOS).debug.xcconfig"; path = "Target Support Files/Pods-NoteHub (iOS)/Pods-NoteHub (iOS).debug.xcconfig"; sourceTree = "<group>"; };
-		43B6561900EE4F9DA299A357 /* Pods-NoteHub (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteHub (macOS).release.xcconfig"; path = "Target Support Files/Pods-NoteHub (macOS)/Pods-NoteHub (macOS).release.xcconfig"; sourceTree = "<group>"; };
-		69C436A24FE0E3A5A32F1C9B /* Pods_NoteHub__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteHub__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB284BD4252896FF0066C6D1 /* NoteHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoteHub.entitlements; sourceTree = "<group>"; };
 		CBF26F7B25289451001C8B1A /* NoteHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHubApp.swift; sourceTree = "<group>"; };
 		CBF26F7C25289451001C8B1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,9 +25,6 @@
 		CBF26F8A25289454001C8B1A /* NoteHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF26F8C25289454001C8B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBF26F8D25289454001C8B1A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		D741A444987C0C97F979E1C5 /* Pods-NoteHub (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteHub (iOS).release.xcconfig"; path = "Target Support Files/Pods-NoteHub (iOS)/Pods-NoteHub (iOS).release.xcconfig"; sourceTree = "<group>"; };
-		E46668DE1B32ED267636F30A /* Pods_NoteHub__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteHub__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF0674EC2D02528260DF2B77 /* Pods-NoteHub (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteHub (macOS).debug.xcconfig"; path = "Target Support Files/Pods-NoteHub (macOS)/Pods-NoteHub (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693212F8759C5DE26D3187CA /* Pods_NoteHub__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,34 +39,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93030052A9936A18E57ECF7C /* Pods_NoteHub__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		527596EEE16D2459D864D731 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				25D8B79D24BA14AB55C48ABD /* Pods-NoteHub (iOS).debug.xcconfig */,
-				D741A444987C0C97F979E1C5 /* Pods-NoteHub (iOS).release.xcconfig */,
-				EF0674EC2D02528260DF2B77 /* Pods-NoteHub (macOS).debug.xcconfig */,
-				43B6561900EE4F9DA299A357 /* Pods-NoteHub (macOS).release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		A592FB61BC9DD7A1AAF99BBD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				69C436A24FE0E3A5A32F1C9B /* Pods_NoteHub__iOS_.framework */,
-				E46668DE1B32ED267636F30A /* Pods_NoteHub__macOS_.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CBF26F7525289451001C8B1A = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +53,6 @@
 				CBF26F8425289454001C8B1A /* iOS */,
 				CBF26F8B25289454001C8B1A /* macOS */,
 				CBF26F8325289454001C8B1A /* Products */,
-				527596EEE16D2459D864D731 /* Pods */,
-				A592FB61BC9DD7A1AAF99BBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,11 +99,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBF26F9625289454001C8B1A /* Build configuration list for PBXNativeTarget "NoteHub (iOS)" */;
 			buildPhases = (
-				0F8F7BC0C67B43B5233AE5AC /* [CP] Check Pods Manifest.lock */,
 				CBF26F7E25289454001C8B1A /* Sources */,
 				CBF26F7F25289454001C8B1A /* Frameworks */,
 				CBF26F8025289454001C8B1A /* Resources */,
-				467E1B79E1D4F17F6E58FF80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,11 +116,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBF26F9925289454001C8B1A /* Build configuration list for PBXNativeTarget "NoteHub (macOS)" */;
 			buildPhases = (
-				653198575E6E8F03453EDEC2 /* [CP] Check Pods Manifest.lock */,
 				CBF26F8625289454001C8B1A /* Sources */,
 				CBF26F8725289454001C8B1A /* Frameworks */,
 				CBF26F8825289454001C8B1A /* Resources */,
-				9049CB999D439863D3C3C533 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,7 +136,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					CBF26F8125289454001C8B1A = {
 						CreatedOnToolsVersion = 12.2;
@@ -220,87 +183,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0F8F7BC0C67B43B5233AE5AC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NoteHub (iOS)-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		467E1B79E1D4F17F6E58FF80 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NoteHub (iOS)/Pods-NoteHub (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NoteHub (iOS)/Pods-NoteHub (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoteHub (iOS)/Pods-NoteHub (iOS)-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		653198575E6E8F03453EDEC2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NoteHub (macOS)-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9049CB999D439863D3C3C533 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NoteHub (macOS)/Pods-NoteHub (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NoteHub (macOS)/Pods-NoteHub (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoteHub (macOS)/Pods-NoteHub (macOS)-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBF26F7E25289454001C8B1A /* Sources */ = {
@@ -441,7 +323,6 @@
 		};
 		CBF26F9725289454001C8B1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25D8B79D24BA14AB55C48ABD /* Pods-NoteHub (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -465,7 +346,6 @@
 		};
 		CBF26F9825289454001C8B1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D741A444987C0C97F979E1C5 /* Pods-NoteHub (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,11 +370,11 @@
 		};
 		CBF26F9A25289454001C8B1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF0674EC2D02528260DF2B77 /* Pods-NoteHub (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
@@ -515,11 +395,11 @@
 		};
 		CBF26F9B25289454001C8B1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43B6561900EE4F9DA299A357 /* Pods-NoteHub (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
