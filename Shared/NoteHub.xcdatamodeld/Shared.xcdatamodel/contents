@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20B28" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
+        <attribute name="changeDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="textNote" optional="YES" attributeType="String"/>
+        <attribute name="titleNote" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Note" positionX="-63" positionY="-18" width="128" height="104"/>
+    </elements>
+</model>
