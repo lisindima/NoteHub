@@ -23,6 +23,8 @@
 		CBA119A02589E4D4001ACFA6 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1199E2589E4D4001ACFA6 /* SideBar.swift */; };
 		CBA119A42589E5B4001ACFA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119A32589E5B4001ACFA6 /* SettingsView.swift */; };
 		CBA119A52589E5B4001ACFA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119A32589E5B4001ACFA6 /* SettingsView.swift */; };
+		CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */; };
+		CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		CBA119972589E42B001ACFA6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = ../../../GitHub/RootView.swift; sourceTree = "<group>"; };
 		CBA1199E2589E4D4001ACFA6 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideBar.swift; path = ../../../GitHub/SideBar.swift; sourceTree = "<group>"; };
 		CBA119A32589E5B4001ACFA6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = ../../../GitHub/SettingsView.swift; sourceTree = "<group>"; };
+		CBCD4B67258B8A0B00FFF109 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
+		CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +73,7 @@
 				CBA1196F2589DFCD001ACFA6 /* iOS */,
 				CBA119762589DFCD001ACFA6 /* macOS */,
 				CBA1196E2589DFCD001ACFA6 /* Products */,
+				CBCD4B6A258B8A1400FFF109 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA119702589DFCD001ACFA6 /* Info.plist */,
+				CBCD4B67258B8A0B00FFF109 /* iOS.entitlements */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -108,6 +117,15 @@
 				CBA119782589DFCD001ACFA6 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		CBCD4B6A258B8A1400FFF109 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */,
+				CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				ENABLE_PREVIEWS = YES;
@@ -359,7 +378,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.NoteHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -372,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				ENABLE_PREVIEWS = YES;
@@ -381,7 +401,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.NoteHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -407,7 +427,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.NoteHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -431,7 +451,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.NoteHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;

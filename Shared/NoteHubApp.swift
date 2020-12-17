@@ -16,5 +16,11 @@ struct NoteHubApp: App {
             RootView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+        #if os(macOS)
+        Settings {
+            SettingsView()
+                .frame(width: 400, height: 300)
+        }
+        #endif
     }
 }
