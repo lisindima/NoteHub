@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
 		CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
+		CB698011258F4CA800E3C49E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698010258F4CA800E3C49E /* SideBar.swift */; };
+		CB698012258F4CA800E3C49E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698010258F4CA800E3C49E /* SideBar.swift */; };
+		CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698019258F4CDD00E3C49E /* SettingsView.swift */; };
+		CB69801B258F4CDD00E3C49E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698019258F4CDD00E3C49E /* SettingsView.swift */; };
+		CB698022258F4D4900E3C49E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698020258F4D0B00E3C49E /* RootView.swift */; };
+		CB698023258F4D4900E3C49E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698020258F4D0B00E3C49E /* RootView.swift */; };
 		CB720F6B258C5809001B65DC /* TrashList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB720F6A258C5809001B65DC /* TrashList.swift */; };
 		CB720F6C258C5809001B65DC /* TrashList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB720F6A258C5809001B65DC /* TrashList.swift */; };
 		CB720F72258C58CB001B65DC /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB720F71258C58CB001B65DC /* NoteItem.swift */; };
@@ -25,18 +31,15 @@
 		CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119672589DFCA001ACFA6 /* Persistence.swift */; };
 		CBA119812589DFCD001ACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA119682589DFCC001ACFA6 /* Assets.xcassets */; };
 		CBA119822589DFCD001ACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA119682589DFCC001ACFA6 /* Assets.xcassets */; };
-		CBA119982589E42B001ACFA6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119972589E42B001ACFA6 /* RootView.swift */; };
-		CBA119992589E42B001ACFA6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119972589E42B001ACFA6 /* RootView.swift */; };
-		CBA1199F2589E4D4001ACFA6 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1199E2589E4D4001ACFA6 /* SideBar.swift */; };
-		CBA119A02589E4D4001ACFA6 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1199E2589E4D4001ACFA6 /* SideBar.swift */; };
-		CBA119A42589E5B4001ACFA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119A32589E5B4001ACFA6 /* SettingsView.swift */; };
-		CBA119A52589E5B4001ACFA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119A32589E5B4001ACFA6 /* SettingsView.swift */; };
 		CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */; };
 		CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB57C6C1258F34B500389C1E /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
+		CB698010258F4CA800E3C49E /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		CB698019258F4CDD00E3C49E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CB698020258F4D0B00E3C49E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CB720F6A258C5809001B65DC /* TrashList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashList.swift; sourceTree = "<group>"; };
 		CB720F71258C58CB001B65DC /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		CB720F76258C58FA001B65DC /* NoteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetails.swift; sourceTree = "<group>"; };
@@ -50,9 +53,6 @@
 		CBA119752589DFCD001ACFA6 /* NoteHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA119772589DFCD001ACFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA119782589DFCD001ACFA6 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		CBA119972589E42B001ACFA6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = ../../../GitHub/RootView.swift; sourceTree = "<group>"; };
-		CBA1199E2589E4D4001ACFA6 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideBar.swift; path = ../../../GitHub/SideBar.swift; sourceTree = "<group>"; };
-		CBA119A32589E5B4001ACFA6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = ../../../GitHub/SettingsView.swift; sourceTree = "<group>"; };
 		CBCD4B67258B8A0B00FFF109 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -93,9 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */,
-				CBA1199E2589E4D4001ACFA6 /* SideBar.swift */,
-				CBA119A32589E5B4001ACFA6 /* SettingsView.swift */,
-				CBA119972589E42B001ACFA6 /* RootView.swift */,
+				CB698010258F4CA800E3C49E /* SideBar.swift */,
+				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
+				CB698020258F4D0B00E3C49E /* RootView.swift */,
 				CBA119662589DFCA001ACFA6 /* NoteList.swift */,
 				CB720F71258C58CB001B65DC /* NoteItem.swift */,
 				CB720F76258C58FA001B65DC /* NoteDetails.swift */,
@@ -243,15 +243,15 @@
 			files = (
 				CB720F77258C58FA001B65DC /* NoteDetails.swift in Sources */,
 				CB720F6B258C5809001B65DC /* TrashList.swift in Sources */,
-				CBA119A42589E5B4001ACFA6 /* SettingsView.swift in Sources */,
 				CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CB720F72258C58CB001B65DC /* NoteItem.swift in Sources */,
 				CBA1197F2589DFCD001ACFA6 /* Persistence.swift in Sources */,
+				CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
-				CBA1199F2589E4D4001ACFA6 /* SideBar.swift in Sources */,
-				CBA119982589E42B001ACFA6 /* RootView.swift in Sources */,
+				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
+				CB698023258F4D4900E3C49E /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,15 +261,15 @@
 			files = (
 				CB720F78258C58FA001B65DC /* NoteDetails.swift in Sources */,
 				CB720F6C258C5809001B65DC /* TrashList.swift in Sources */,
-				CBA119A52589E5B4001ACFA6 /* SettingsView.swift in Sources */,
 				CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CB720F73258C58CB001B65DC /* NoteItem.swift in Sources */,
 				CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */,
+				CB69801B258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197C2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBA1197E2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
-				CBA119A02589E4D4001ACFA6 /* SideBar.swift in Sources */,
-				CBA119992589E42B001ACFA6 /* RootView.swift in Sources */,
+				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,
+				CB698022258F4D4900E3C49E /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

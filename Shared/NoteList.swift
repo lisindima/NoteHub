@@ -12,7 +12,7 @@ struct NoteList: View {
     @Environment(\.managedObjectContext) private var moc
     @State private var showCreateNote: Bool = false
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: false)],
         animation: .default
     )
     private var notes: FetchedResults<Note>

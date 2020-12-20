@@ -14,6 +14,7 @@ struct NoteHubApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .accentColor(.purple)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         #if os(macOS)
