@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NoteList: View {
     @Environment(\.managedObjectContext) private var moc
-
+    @State private var showCreateNote: Bool = false
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: true)],
         animation: .default
@@ -26,28 +26,19 @@ struct NoteList: View {
             }
             .onDelete(perform: deleteItems)
         }
+        .sheet(isPresented: $showCreateNote) {
+            CreateNote()
+                .frame(width: 400, height: 500)
+        }
         .toolbar {
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+            ToolbarItem(placement: .primaryAction) {
+                Button(action: { showCreateNote = true }) {
+                    Label("Add Item", systemImage: "plus")
+                }
+                .help("Беебебебебеб")
             }
         }
         .navigationTitle("Заметки")
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Note(context: moc)
-            newItem.createDate = Date()
-
-            do {
-                try moc.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
     }
 
     private func deleteItems(offsets: IndexSet) {
@@ -57,8 +48,6 @@ struct NoteList: View {
             do {
                 try moc.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }

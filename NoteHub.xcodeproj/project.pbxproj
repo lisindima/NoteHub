@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
+		CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
 		CB720F6B258C5809001B65DC /* TrashList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB720F6A258C5809001B65DC /* TrashList.swift */; };
 		CB720F6C258C5809001B65DC /* TrashList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB720F6A258C5809001B65DC /* TrashList.swift */; };
 		CB720F72258C58CB001B65DC /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB720F71258C58CB001B65DC /* NoteItem.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB57C6C1258F34B500389C1E /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
 		CB720F6A258C5809001B65DC /* TrashList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashList.swift; sourceTree = "<group>"; };
 		CB720F71258C58CB001B65DC /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		CB720F76258C58FA001B65DC /* NoteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetails.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 				CBA119662589DFCA001ACFA6 /* NoteList.swift */,
 				CB720F71258C58CB001B65DC /* NoteItem.swift */,
 				CB720F76258C58FA001B65DC /* NoteDetails.swift */,
+				CB57C6C1258F34B500389C1E /* CreateNote.swift */,
 				CB720F6A258C5809001B65DC /* TrashList.swift */,
 				CBA119672589DFCA001ACFA6 /* Persistence.swift */,
 				CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */,
@@ -245,6 +249,7 @@
 				CBA1197F2589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
+				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
 				CBA1199F2589E4D4001ACFA6 /* SideBar.swift in Sources */,
 				CBA119982589E42B001ACFA6 /* RootView.swift in Sources */,
 			);
@@ -262,6 +267,7 @@
 				CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CBA1197C2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBA1197E2589DFCD001ACFA6 /* NoteList.swift in Sources */,
+				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
 				CBA119A02589E4D4001ACFA6 /* SideBar.swift in Sources */,
 				CBA119992589E42B001ACFA6 /* RootView.swift in Sources */,
 			);

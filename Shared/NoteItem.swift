@@ -11,7 +11,17 @@ struct NoteItem: View {
     var note: Note
     
     var body: some View {
-        Text("Hello, World!")
+        VStack(alignment: .leading) {
+            Text(note.titleNote ?? "")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .lineLimit(1)
+            Text(note.textNote ?? "")
+                .font(.caption2)
+                .lineLimit(2)
+            Text(note.createDate ?? Date(), style: .relative)
+                .font(.caption2)
+        }
     }
 }
 
