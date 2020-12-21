@@ -44,7 +44,6 @@ struct NoteList: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { notes[$0] }.forEach(moc.delete)
-
             do {
                 try moc.save()
             } catch {

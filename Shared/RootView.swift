@@ -13,16 +13,14 @@ struct RootView: View {
     #endif
     
     var body: some View {
-        NavigationView {
-            #if os(macOS)
+        #if os(macOS)
+        SideBar()
+        #else
+        if horizontalSizeClass == .compact {
+            TabBar()
+        } else {
             SideBar()
-            #else
-            if horizontalSizeClass == .compact {
-                NoteList()
-            } else {
-                SideBar()
-            }
-            #endif
         }
+        #endif
     }
 }

@@ -35,48 +35,51 @@ struct SideBar: View {
     }
     
     var body: some View {
-        #if os(macOS)
-        sidebar
-            .frame(width: 180)
-        #else
-        sidebar
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button(action: { openSettings = true }) {
-                        Image(systemName: "gear")
-                            .imageScale(.large)
+        NavigationView {
+            #if os(macOS)
+            sidebar
+                .frame(width: 180)
+            #else
+            sidebar
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: { openSettings = true }) {
+                            Image(systemName: "gear")
+                                .imageScale(.large)
+                        }
                     }
                 }
-            }
-            .sheet(isPresented: $openSettings) {
-                NavigationView {
-                    SettingsView()
-                        .toolbar {
-                            ToolbarItem(placement: .primaryAction) {
-                                Button(action: { openSettings = false }) {
-                                    Text("Закрыть")
+                .sheet(isPresented: $openSettings) {
+                    NavigationView {
+                        SettingsView()
+                            .toolbar {
+                                ToolbarItem(placement: .primaryAction) {
+                                    Button(action: { openSettings = false }) {
+                                        Text("Закрыть")
+                                    }
                                 }
                             }
-                        }
+                    }
                 }
-            }
-        #endif
-        
-        Text("Выберите\nпункт в меню")
-            .fontWeight(.bold)
-            .foregroundColor(.secondary)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
-        Text("Выберите заметку\nдля просмотра")
-            .fontWeight(.bold)
-            .foregroundColor(.secondary)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            #endif
+            
+            Text("Выберите\nпункт в меню")
+                .fontWeight(.bold)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            Text("Выберите заметку\nдля просмотра")
+                .fontWeight(.bold)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
     }
 }
 
 enum NavigationItem {
     case note
     case trash
+    case settings
 }
