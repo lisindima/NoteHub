@@ -11,7 +11,6 @@ struct NoteDetails: View {
     var note: Note
     
     var body: some View {
-        Text(note.titleNote!)
         Text(note.textNote!)
     }
 }

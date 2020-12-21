@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,8 @@
 		CB720F78258C58FA001B65DC /* NoteDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB720F76258C58FA001B65DC /* NoteDetails.swift */; };
 		CB8982792590DA1200830577 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8982782590DA1200830577 /* TabBar.swift */; };
 		CB89827A2590DA1200830577 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8982782590DA1200830577 /* TabBar.swift */; };
+		CB8982812590E49D00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982802590E49D00830577 /* HighlightedTextEditor */; };
+		CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982842590E4AD00830577 /* HighlightedTextEditor */; };
 		CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */,
 				CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8982812590E49D00830577 /* HighlightedTextEditor in Frameworks */,
 				CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +168,9 @@
 			dependencies = (
 			);
 			name = "NoteHub (iOS)";
+			packageProductDependencies = (
+				CB8982842590E4AD00830577 /* HighlightedTextEditor */,
+			);
 			productName = "NoteHub (iOS)";
 			productReference = CBA1196D2589DFCD001ACFA6 /* NoteHub.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +188,9 @@
 			dependencies = (
 			);
 			name = "NoteHub (macOS)";
+			packageProductDependencies = (
+				CB8982802590E49D00830577 /* HighlightedTextEditor */,
+			);
 			productName = "NoteHub (macOS)";
 			productReference = CBA119752589DFCD001ACFA6 /* NoteHub.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +221,9 @@
 				Base,
 			);
 			mainGroup = CBA1195D2589DFCA001ACFA6;
+			packageReferences = (
+				CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */,
+			);
 			productRefGroup = CBA1196E2589DFCD001ACFA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -519,6 +532,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kyle-n/HighlightedTextEditor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB8982802590E49D00830577 /* HighlightedTextEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */;
+			productName = HighlightedTextEditor;
+		};
+		CB8982842590E4AD00830577 /* HighlightedTextEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */;
+			productName = HighlightedTextEditor;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */ = {
