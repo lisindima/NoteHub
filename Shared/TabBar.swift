@@ -15,17 +15,17 @@ struct TabBar: View {
             NavigationView {
                 NoteList()
             }
-            .tabItem { Label("Заметки", systemImage: "note") }
+            .tabItem { Label("notes", systemImage: "note") }
             .tag(NavigationItem.note)
             NavigationView {
                 TrashList()
             }
-            .tabItem { Label("Корзина", systemImage: "trash") }
+            .tabItem { Label("trash", systemImage: "trash") }
             .tag(NavigationItem.trash)
             NavigationView {
                 SettingsView()
             }
-            .tabItem { Label("Настройка", systemImage: "gear") }
+            .tabItem { Label("settings", systemImage: "gear") }
             .tag(NavigationItem.settings)
         }
     }

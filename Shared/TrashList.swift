@@ -10,7 +10,7 @@ import SwiftUI
 struct TrashList: View {
     var body: some View {
         Text("Hello, World!")
-            .navigationTitle("Корзина")
+            .navigationTitle("trash")
     }
 }
 

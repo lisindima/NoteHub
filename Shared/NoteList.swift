@@ -38,7 +38,7 @@ struct NoteList: View {
                 .help("Беебебебебеб")
             }
         }
-        .navigationTitle("Заметки")
+        .navigationTitle("notes")
     }
 
     private func deleteItems(offsets: IndexSet) {

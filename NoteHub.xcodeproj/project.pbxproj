@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB3167A52591C79C00291DF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3167A82591C79C00291DF6 /* Localizable.strings */; };
+		CB3167A62591C79C00291DF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3167A82591C79C00291DF6 /* Localizable.strings */; };
 		CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
 		CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
 		CB698011258F4CA800E3C49E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698010258F4CA800E3C49E /* SideBar.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB3167A72591C79C00291DF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CB3167AB2591C7A500291DF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB57C6C1258F34B500389C1E /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
 		CB698010258F4CA800E3C49E /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		CB698019258F4CDD00E3C49E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				CBA119672589DFCA001ACFA6 /* Persistence.swift */,
 				CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */,
 				CBA119682589DFCC001ACFA6 /* Assets.xcassets */,
+				CB3167A82591C79C00291DF6 /* Localizable.strings */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = CBA1195D2589DFCA001ACFA6;
 			packageReferences = (
@@ -240,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA119812589DFCD001ACFA6 /* Assets.xcassets in Resources */,
+				CB3167A52591C79C00291DF6 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA119822589DFCD001ACFA6 /* Assets.xcassets in Resources */,
+				CB3167A62591C79C00291DF6 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +301,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB3167A82591C79C00291DF6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB3167A72591C79C00291DF6 /* ru */,
+				CB3167AB2591C7A500291DF6 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBA119832589DFCD001ACFA6 /* Debug */ = {
@@ -416,7 +436,7 @@
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +459,7 @@
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

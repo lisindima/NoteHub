@@ -13,17 +13,17 @@ struct SideBar: View {
     
     var sidebar: some View {
         List(selection: $selection) {
-            Section(header: Text("Главное")) {
+            Section(header: Text("general")) {
                 NavigationLink(destination: NoteList()) {
-                    Label("Заметки", systemImage: "note")
+                    Label("notes", systemImage: "note")
                 }
                 .tag(NavigationItem.note)
                 NavigationLink(destination: TrashList()) {
-                    Label("Корзина", systemImage: "trash")
+                    Label("trash", systemImage: "trash")
                 }
                 .tag(NavigationItem.trash)
             }
-            Section(header: Text("Теги")) {
+            Section(header: Text("tags")) {
                 Label("Тег", systemImage: "tag")
                 Label("Тег", systemImage: "tag")
                 Label("Тег", systemImage: "tag")
@@ -31,7 +31,7 @@ struct SideBar: View {
             }
         }
         .listStyle(SidebarListStyle())
-        .navigationTitle("Главная")
+        .navigationTitle("NoteHub")
     }
     
     var body: some View {
@@ -55,7 +55,7 @@ struct SideBar: View {
                             .toolbar {
                                 ToolbarItem(placement: .primaryAction) {
                                     Button(action: { openSettings = false }) {
-                                        Text("Закрыть")
+                                        Text("close")
                                     }
                                 }
                             }
@@ -63,13 +63,13 @@ struct SideBar: View {
                 }
             #endif
             
-            Text("Выберите\nпункт в меню")
+            Text("sidebar_title_select_menu")
                 .fontWeight(.bold)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
-            Text("Выберите заметку\nдля просмотра")
+            Text("sidebar_title_select_note")
                 .fontWeight(.bold)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
