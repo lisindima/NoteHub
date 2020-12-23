@@ -41,6 +41,7 @@
 		CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */; };
 		CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
 		CBEE4FDA25930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
+		CBEE4FDF25931BDE0090DD9F /* NativeSearchBar in Frameworks */ = {isa = PBXBuildFile; productRef = CBEE4FDE25931BDE0090DD9F /* NativeSearchBar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */,
+				CBEE4FDF25931BDE0090DD9F /* NativeSearchBar in Frameworks */,
 				CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +181,7 @@
 			name = "NoteHub (iOS)";
 			packageProductDependencies = (
 				CB8982842590E4AD00830577 /* HighlightedTextEditor */,
+				CBEE4FDE25931BDE0090DD9F /* NativeSearchBar */,
 			);
 			productName = "NoteHub (iOS)";
 			productReference = CBA1196D2589DFCD001ACFA6 /* NoteHub.app */;
@@ -233,6 +236,7 @@
 			mainGroup = CBA1195D2589DFCA001ACFA6;
 			packageReferences = (
 				CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */,
+				CBEE4FDD25931BDE0090DD9F /* XCRemoteSwiftPackageReference "NativeSearchBar" */,
 			);
 			productRefGroup = CBA1196E2589DFCD001ACFA6 /* Products */;
 			projectDirPath = "";
@@ -568,6 +572,14 @@
 				minimumVersion = 1.5.5;
 			};
 		};
+		CBEE4FDD25931BDE0090DD9F /* XCRemoteSwiftPackageReference "NativeSearchBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lisindima/NativeSearchBar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -580,6 +592,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */;
 			productName = HighlightedTextEditor;
+		};
+		CBEE4FDE25931BDE0090DD9F /* NativeSearchBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBEE4FDD25931BDE0090DD9F /* XCRemoteSwiftPackageReference "NativeSearchBar" */;
+			productName = NativeSearchBar;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -9,6 +9,15 @@
           "revision": "7b37862aa3113afc92d63a07f2986d72509cb63f",
           "version": "1.5.5"
         }
+      },
+      {
+        "package": "NativeSearchBar",
+        "repositoryURL": "https://github.com/lisindima/NativeSearchBar.git",
+        "state": {
+          "branch": null,
+          "revision": "a43b661272fde6992dcb73267e024adb474779d8",
+          "version": "2.2.0"
+        }
       }
     ]
   },

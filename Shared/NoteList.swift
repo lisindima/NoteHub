@@ -7,19 +7,23 @@
 
 import CoreData
 import SwiftUI
+import NativeSearchBar
 
 struct NoteList: View {
     @Environment(\.managedObjectContext) private var moc
     @State private var showCreateNote: Bool = false
+    @State private var searchText: String = ""
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: false)],
         animation: .default
     )
     private var notes: FetchedResults<Note>
-
+    
     var body: some View {
         List {
-            ForEach(notes) { note in
+            ForEach(notes.filter {
+                searchText.isEmpty || $0.textNote!.localizedStandardContains(searchText)
+            }) { note in
                 NavigationLink(destination: NoteDetails(note: note)) {
                     NoteItem(note: note)
                 }
@@ -27,6 +31,7 @@ struct NoteList: View {
             .onDelete(perform: deleteItems)
         }
         .modifier(ListStyle())
+        .navigationSearchBar("Поиск заметок", searchText: $searchText)
         .sheet(isPresented: $showCreateNote) {
             CreateNote()
                 .accentColor(.purple)
