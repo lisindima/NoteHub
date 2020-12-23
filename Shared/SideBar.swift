@@ -74,6 +74,14 @@ struct SideBar: View {
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: { }) {
+                            Label("Add Item", systemImage: "plus")
+                        }
+                        .help("Беебебебебеб")
+                    }
+                }
         }
     }
 }

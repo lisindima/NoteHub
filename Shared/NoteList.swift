@@ -19,16 +19,17 @@ struct NoteList: View {
 
     var body: some View {
         List {
-            ForEach(notes) { note in
-                NavigationLink(destination: NoteDetails(note: note)) {
-                    NoteItem(note: note)
+                ForEach(notes) { note in
+                    NavigationLink(destination: NoteDetails(note: note)) {
+                        NoteItem(note: note)
+                    }
                 }
-            }
-            .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteItems)
         }
+        .modifier(ListStyle())
         .sheet(isPresented: $showCreateNote) {
             CreateNote()
-                .frame(width: 400, height: 500)
+                .accentColor(.purple)
         }
         .toolbar {
             ToolbarItem(placement: .primaryAction) {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBar: View {
-    @State private var selection: NavigationItem? = .note
+    @State private var selection: NavigationItem = .note
     
     var body: some View {
         TabView(selection: $selection) {

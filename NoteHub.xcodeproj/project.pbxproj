@@ -39,6 +39,8 @@
 		CBA119822589DFCD001ACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA119682589DFCC001ACFA6 /* Assets.xcassets */; };
 		CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */; };
 		CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */; };
+		CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
+		CBEE4FDA25930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,7 @@
 		CBCD4B67258B8A0B00FFF109 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		CBEE4FD825930E430090DD9F /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 				CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */,
 				CBA119682589DFCC001ACFA6 /* Assets.xcassets */,
 				CB3167A82591C79C00291DF6 /* Localizable.strings */,
+				CBEE4FD825930E430090DD9F /* Modifier.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -274,6 +278,7 @@
 				CBA1197F2589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
+				CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
@@ -293,6 +298,7 @@
 				CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CB69801B258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197C2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
+				CBEE4FDA25930E430090DD9F /* Modifier.swift in Sources */,
 				CBA1197E2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,

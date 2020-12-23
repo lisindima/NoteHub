@@ -13,7 +13,6 @@ struct NoteItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(note.textNote ?? "")
-                .font(.caption2)
                 .fontWeight(.semibold)
                 .lineLimit(2)
             Text(note.createDate ?? Date(), style: .relative)

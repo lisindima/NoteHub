@@ -30,15 +30,32 @@ struct CreateNote: View {
     }
     
     var body: some View {
-        HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
-            .padding()
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button(action: saveNote) {
-                        Text("Сохранить")
+        #if os(macOS)
+        note
+            .frame(width: 400, height: 500)
+        #else
+        note
+        #endif
+    }
+    
+    var note: some View {
+        NavigationView {
+            HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
+                .padding(6)
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: saveNote) {
+                            Text("Сохранить")
+                        }
+                    }
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button(action: { presentationMode.wrappedValue.dismiss() }) {
+                            Text("Закрыть")
+                        }
                     }
                 }
-            }
+                .navigationTitle("Новая заметка")
+        }
     }
 }
 

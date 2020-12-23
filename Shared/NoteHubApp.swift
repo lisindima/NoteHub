@@ -17,6 +17,9 @@ struct NoteHubApp: App {
                 .accentColor(.purple)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+        .commands {
+            SidebarCommands()
+        }
         #if os(macOS)
         Settings {
             SettingsView()
