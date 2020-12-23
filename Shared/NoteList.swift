@@ -19,12 +19,12 @@ struct NoteList: View {
 
     var body: some View {
         List {
-                ForEach(notes) { note in
-                    NavigationLink(destination: NoteDetails(note: note)) {
-                        NoteItem(note: note)
-                    }
+            ForEach(notes) { note in
+                NavigationLink(destination: NoteDetails(note: note)) {
+                    NoteItem(note: note)
                 }
-                .onDelete(perform: deleteItems)
+            }
+            .onDelete(perform: deleteItems)
         }
         .modifier(ListStyle())
         .sheet(isPresented: $showCreateNote) {
@@ -41,7 +41,7 @@ struct NoteList: View {
         }
         .navigationTitle("notes")
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { notes[$0] }.forEach(moc.delete)
