@@ -5,8 +5,8 @@
 //  Created by Дмитрий Лисин on 20.12.2020.
 //
 
-import SwiftUI
 import HighlightedTextEditor
+import SwiftUI
 
 struct CreateNote: View {
     @Environment(\.presentationMode) private var presentationMode

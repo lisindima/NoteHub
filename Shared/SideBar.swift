@@ -76,7 +76,7 @@ struct SideBar: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
-                        Button(action: { }) {
+                        Button(action: {}) {
                             Label("Add Item", systemImage: "plus")
                         }
                         .help("Беебебебебеб")

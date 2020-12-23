@@ -6,13 +6,15 @@
 //
 
 import CoreData
-import SwiftUI
 import NativeSearchBar
+import SwiftUI
 
 struct NoteList: View {
     @Environment(\.managedObjectContext) private var moc
+    
     @State private var showCreateNote: Bool = false
     @State private var searchText: String = ""
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: false)],
         animation: .default
@@ -20,6 +22,36 @@ struct NoteList: View {
     private var notes: FetchedResults<Note>
     
     var body: some View {
+        #if os(macOS)
+        list
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: { showCreateNote = true }) {
+                        Image(systemName: "plus")
+                    }
+                    .help("Беебебебебеб")
+                }
+            }
+        #else
+        list
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button(action: {}) {
+                        Image(systemName: "plus")
+                    }
+                    Spacer()
+                    Text("\(notes.count) заметок")
+                        .font(.caption)
+                    Spacer()
+                    Button(action: { showCreateNote = true }) {
+                        Image(systemName: "doc.badge.plus")
+                    }
+                }
+            }
+        #endif
+    }
+    
+    var list: some View {
         List {
             ForEach(notes.filter {
                 searchText.isEmpty || $0.textNote!.localizedStandardContains(searchText)
@@ -32,19 +64,11 @@ struct NoteList: View {
         }
         .modifier(ListStyle())
         .navigationSearchBar("Поиск заметок", searchText: $searchText)
+        .navigationTitle("notes")
         .sheet(isPresented: $showCreateNote) {
             CreateNote()
                 .accentColor(.purple)
         }
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: { showCreateNote = true }) {
-                    Label("Add Item", systemImage: "plus")
-                }
-                .help("Беебебебебеб")
-            }
-        }
-        .navigationTitle("notes")
     }
     
     private func deleteItems(offsets: IndexSet) {
