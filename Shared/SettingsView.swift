@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject private var settingsStore: SettingsStore
+    
     var body: some View {
-        Text("Hello, World!")
-            .navigationTitle("settings")
+        Form {
+            Section(header: Text("Кастомизация")) {
+                ColorPicker(selection: $settingsStore.accentColor, supportsOpacity: true) {
+                    Label("Цветовой акцент", systemImage: "paintbrush")
+                }
+            }
+        }
+        .navigationTitle("settings")
     }
 }
 
