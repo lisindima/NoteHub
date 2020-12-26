@@ -40,7 +40,7 @@ struct NoteList: View {
                         Image(systemName: "plus")
                     }
                     Spacer()
-                    Text("\(notes.count) заметок")
+                    Text("Заметок: \(notes.count)")
                         .font(.caption)
                     Spacer()
                     Button(action: { showCreateNote = true }) {
@@ -54,7 +54,7 @@ struct NoteList: View {
     var list: some View {
         List {
             ForEach(notes.filter {
-                searchText.isEmpty || $0.textNote!.localizedStandardContains(searchText)
+                searchText.isEmpty || $0.textNote.localizedStandardContains(searchText)
             }) { note in
                 NavigationLink(destination: NoteDetails(note: note)) {
                     NoteItem(note: note)

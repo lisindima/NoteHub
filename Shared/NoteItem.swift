@@ -12,10 +12,10 @@ struct NoteItem: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(note.textNote ?? "")
+            Text(note.textNote)
                 .fontWeight(.semibold)
                 .lineLimit(2)
-            Text(note.createDate ?? Date(), style: .relative)
+            Text(note.createDate, style: .relative)
                 .font(.caption2)
         }
     }

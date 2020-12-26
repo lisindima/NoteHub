@@ -17,7 +17,7 @@ struct NoteDetails: View {
     
     init(note: Note) {
         self.note = note
-        _textNote = State<String>(initialValue: note.textNote!)
+        _textNote = State<String>(initialValue: note.textNote)
     }
     
     private func saveNote() {

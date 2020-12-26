@@ -26,6 +26,10 @@
 		CB8982792590DA1200830577 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8982782590DA1200830577 /* TabBar.swift */; };
 		CB8982812590E49D00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982802590E49D00830577 /* HighlightedTextEditor */; };
 		CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982842590E4AD00830577 /* HighlightedTextEditor */; };
+		CB9018532597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */; };
+		CB9018542597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */; };
+		CB9018552597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */; };
+		CB9018562597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */; };
 		CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */; };
@@ -57,6 +61,8 @@
 		CB720F71258C58CB001B65DC /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		CB720F76258C58FA001B65DC /* NoteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetails.swift; sourceTree = "<group>"; };
 		CB8982782590DA1200830577 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CBA119642589DFCA001ACFA6 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHubApp.swift; sourceTree = "<group>"; };
 		CBA119662589DFCA001ACFA6 /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB9018592597854F00C18DE3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */,
+				CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */,
+				CBA119672589DFCA001ACFA6 /* Persistence.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		CBA1195D2589DFCA001ACFA6 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +128,7 @@
 		CBA119622589DFCA001ACFA6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CB9018592597854F00C18DE3 /* CoreData */,
 				CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */,
 				CB698010258F4CA800E3C49E /* SideBar.swift */,
 				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
@@ -123,7 +140,6 @@
 				CB57C6C1258F34B500389C1E /* CreateNote.swift */,
 				CBEE4FD825930E430090DD9F /* Modifier.swift */,
 				CB720F6A258C5809001B65DC /* TrashList.swift */,
-				CBA119672589DFCA001ACFA6 /* Persistence.swift */,
 				CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */,
 				CBA119682589DFCC001ACFA6 /* Assets.xcassets */,
 				CB3167A82591C79C00291DF6 /* Localizable.strings */,
@@ -289,9 +305,11 @@
 				CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */,
+				CB9018552597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CBDA3DF725947E84005A24EC /* SettingsStore.swift in Sources */,
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
+				CB9018532597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CB698023258F4D4900E3C49E /* RootView.swift in Sources */,
 			);
@@ -302,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB720F78258C58FA001B65DC /* NoteDetails.swift in Sources */,
+				CB9018542597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */,
 				CB720F6C258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CBDA3DF825947E84005A24EC /* SettingsStore.swift in Sources */,
@@ -314,6 +333,7 @@
 				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CB698022258F4D4900E3C49E /* RootView.swift in Sources */,
+				CB9018562597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
