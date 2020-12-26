@@ -6,12 +6,28 @@
 //
 
 import SwiftUI
+import HighlightedTextEditor
 
 struct NoteDetails: View {
+    @Environment(\.managedObjectContext) private var moc
+    
+    @State private var textNote: String = ""
+    
     var note: Note
     
+    init(note: Note) {
+        self.note = note
+        _textNote = State<String>(initialValue: note.textNote!)
+    }
+    
+    private func saveNote() {
+        
+    }
+    
     var body: some View {
-        Text(note.textNote!)
+        HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
+            .padding(6)
+            .onDisappear(perform: saveNote)
     }
 }
 

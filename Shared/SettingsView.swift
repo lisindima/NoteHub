@@ -10,12 +10,24 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject private var settingsStore: SettingsStore
     
+    @State private var openSheetAboutApp: Bool = false
+    
+    private func openAboutApp() {
+        
+    }
+    
     var body: some View {
         Form {
             Section(header: Text("Кастомизация")) {
                 ColorPicker(selection: $settingsStore.accentColor, supportsOpacity: true) {
                     Label("Цветовой акцент", systemImage: "paintbrush")
                 }
+            }
+            Section {
+                Button(action: openAboutApp) {
+                    Label("О приложении", systemImage: "info.circle")
+                }
+                .buttonStyle(PlainButtonStyle())
             }
         }
         .navigationTitle("settings")
