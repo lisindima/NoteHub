@@ -12,9 +12,7 @@ struct SettingsView: View {
     
     @State private var openSheetAboutApp: Bool = false
     
-    private func openAboutApp() {
-        
-    }
+    private func openAboutApp() {}
     
     var body: some View {
         Form {

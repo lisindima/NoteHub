@@ -55,7 +55,7 @@ struct NoteList: View {
         List {
             ForEach(notes.filter {
                 searchText.isEmpty || $0.textNote.localizedStandardContains(searchText)
-            }) { note in
+            }, id: \.id) { note in
                 NavigationLink(destination: NoteDetails(note: note)) {
                     NoteItem(note: note)
                 }

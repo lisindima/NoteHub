@@ -6,23 +6,19 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension Note {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Note> {
-        return NSFetchRequest<Note>(entityName: "Note")
+public extension Note {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<Note> {
+        NSFetchRequest<Note>(entityName: "Note")
     }
 
-    @NSManaged public var changeDate: Date
-    @NSManaged public var createDate: Date
-    @NSManaged public var isDelete: NSNumber
-    @NSManaged public var textNote: String
-
+    @NSManaged var id: UUID
+    @NSManaged var changeDate: Date
+    @NSManaged var createDate: Date
+    @NSManaged var isDelete: NSNumber
+    @NSManaged var textNote: String
 }
 
-extension Note : Identifiable {
-
-}
+extension Note: Identifiable {}

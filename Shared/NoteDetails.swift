@@ -5,8 +5,8 @@
 //  Created by Дмитрий Лисин on 18.12.2020.
 //
 
-import SwiftUI
 import HighlightedTextEditor
+import SwiftUI
 
 struct NoteDetails: View {
     @Environment(\.managedObjectContext) private var moc
@@ -21,7 +21,14 @@ struct NoteDetails: View {
     }
     
     private func saveNote() {
-        
+        note.changeDate = Date()
+        note.textNote = textNote
+        do {
+            try moc.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
     
     var body: some View {
