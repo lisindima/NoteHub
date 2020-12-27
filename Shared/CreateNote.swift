@@ -42,7 +42,7 @@ struct CreateNote: View {
     var note: some View {
         NavigationView {
             HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
-                .padding(6)
+                .padding([.horizontal], 6)
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
                         Button(action: saveNote) {

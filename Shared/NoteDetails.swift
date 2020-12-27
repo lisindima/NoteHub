@@ -33,7 +33,7 @@ struct NoteDetails: View {
     
     var body: some View {
         HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
-            .padding(6)
+            .padding([.horizontal], 6)
             .onDisappear(perform: saveNote)
     }
 }
