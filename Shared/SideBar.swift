@@ -11,6 +11,12 @@ struct SideBar: View {
     @State private var selection: NavigationItem? = .note
     @State private var openSettings: Bool = false
     
+    #if os(macOS)
+    private func toggleSidebar() {
+        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+    }
+    #endif
+    
     var sidebar: some View {
         List(selection: $selection) {
             Section(header: Text("general")) {
@@ -39,6 +45,13 @@ struct SideBar: View {
             #if os(macOS)
             sidebar
                 .frame(width: 180)
+                .toolbar {
+                    ToolbarItem(placement: .navigation) {
+                        Button(action: toggleSidebar) {
+                            Image(systemName: "sidebar.left")
+                        }
+                    }
+                }
             #else
             sidebar
                 .toolbar {
@@ -74,14 +87,6 @@ struct SideBar: View {
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        Button(action: {}) {
-                            Label("Add Item", systemImage: "plus")
-                        }
-                        .help("Беебебебебеб")
-                    }
-                }
         }
     }
 }
