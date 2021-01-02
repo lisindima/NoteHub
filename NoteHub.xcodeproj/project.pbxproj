@@ -42,6 +42,8 @@
 		CBA119822589DFCD001ACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA119682589DFCC001ACFA6 /* Assets.xcassets */; };
 		CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */; };
 		CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */; };
+		CBD5AF0E25A06E2D0090FB9F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */; };
+		CBD5AF0F25A06E2D0090FB9F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */; };
 		CBDA3DF725947E84005A24EC /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3DF625947E84005A24EC /* SettingsStore.swift */; };
 		CBDA3DF825947E84005A24EC /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3DF625947E84005A24EC /* SettingsStore.swift */; };
 		CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
@@ -76,6 +78,7 @@
 		CBCD4B67258B8A0B00FFF109 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CBDA3DF625947E84005A24EC /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		CBEE4FD825930E430090DD9F /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +137,7 @@
 				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
 				CBDA3DF625947E84005A24EC /* SettingsStore.swift */,
 				CB698020258F4D0B00E3C49E /* RootView.swift */,
+				CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */,
 				CBA119662589DFCA001ACFA6 /* NoteList.swift */,
 				CB720F71258C58CB001B65DC /* NoteItem.swift */,
 				CB720F76258C58FA001B65DC /* NoteDetails.swift */,
@@ -300,6 +304,7 @@
 				CB720F6B258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CB8982792590DA1200830577 /* TabBar.swift in Sources */,
+				CBD5AF0E25A06E2D0090FB9F /* LoadingView.swift in Sources */,
 				CB720F72258C58CB001B65DC /* NoteItem.swift in Sources */,
 				CBA1197F2589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */,
@@ -324,6 +329,7 @@
 				CB720F6C258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CBDA3DF825947E84005A24EC /* SettingsStore.swift in Sources */,
+				CBD5AF0F25A06E2D0090FB9F /* LoadingView.swift in Sources */,
 				CB720F73258C58CB001B65DC /* NoteItem.swift in Sources */,
 				CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CB69801B258F4CDD00E3C49E /* SettingsView.swift in Sources */,

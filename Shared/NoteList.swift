@@ -67,18 +67,20 @@ struct NoteList: View {
     }
     
     var list: some View {
-        List {
-            ForEach(notes.filter {
-                searchText.isEmpty || $0.textNote.localizedStandardContains(searchText)
-            }, id: \.id) { note in
-                NavigationLink(destination: NoteDetails(note: note)) {
-                    NoteItem(note: note)
+        LoadingView(notes, title: "Нет заметок", subTitle: "Что то еще дописать....") { notes in
+            List {
+                ForEach(notes.filter {
+                    searchText.isEmpty || $0.textNote.localizedStandardContains(searchText)
+                }, id: \.id) { note in
+                    NavigationLink(destination: NoteDetails(note: note)) {
+                        NoteItem(note: note)
+                    }
                 }
+                .onDelete(perform: deleteNote)
             }
-            .onDelete(perform: deleteNote)
+            .modifier(ListStyle())
+            .navigationSearchBar("Поиск заметок", searchText: $searchText)
         }
-        .modifier(ListStyle())
-        .navigationSearchBar("Поиск заметок", searchText: $searchText)
         .navigationTitle("notes")
         .sheet(isPresented: $showCreateNote) {
             CreateNote()
