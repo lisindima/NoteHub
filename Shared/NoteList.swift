@@ -21,6 +21,21 @@ struct NoteList: View {
     )
     private var notes: FetchedResults<Note>
     
+    private func deleteNote(offsets: IndexSet) {
+        withAnimation {
+            for index in offsets {
+                let note = notes[index]
+                note.isDelete = true
+            }
+            do {
+                try moc.save()
+            } catch {
+                let nsError = error as NSError
+                print("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
+    
     var body: some View {
         #if os(macOS)
         list
@@ -60,7 +75,7 @@ struct NoteList: View {
                     NoteItem(note: note)
                 }
             }
-            .onDelete(perform: deleteItems)
+            .onDelete(perform: deleteNote)
         }
         .modifier(ListStyle())
         .navigationSearchBar("Поиск заметок", searchText: $searchText)
@@ -68,18 +83,6 @@ struct NoteList: View {
         .sheet(isPresented: $showCreateNote) {
             CreateNote()
                 .accentColor(.purple)
-        }
-    }
-    
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { notes[$0] }.forEach(moc.delete)
-            do {
-                try moc.save()
-            } catch {
-                let nsError = error as NSError
-                print("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
         }
     }
 }
