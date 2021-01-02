@@ -1,2 +1,2 @@
 # NoteHub
-[WIP] Легкое приложение заметок с CoreData и CloudKit. Построенное с SwiftUI, для iOS, iPadOS, macOS и watchOS 
+[WIP] Легкое приложение MarkDown-заметок. Построенное с помощью SwiftUI, CoreData и CloudKit, для iOS, iPadOS, macOS и watchOS 
