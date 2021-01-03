@@ -33,8 +33,29 @@ struct NoteDetails: View {
     
     var body: some View {
         HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
-            .padding([.horizontal], 6)
             .onDisappear(perform: saveNote)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Menu {
+                        Section {
+                            Text(note.createDate, style: .date)
+                            Text(note.changeDate, style: .date)
+                        }
+                        Section {
+                            Button(action: {}) {
+                                Label("Закрепить", systemImage: "pin")
+                            }
+                            Button(action: {}) {
+                                Label("Удалить заметку", systemImage: "trash")
+                            }
+                        }
+                    }
+                    label: {
+                        Label("Add", systemImage: "plus")
+                    }
+                }
+            }
+            .modifier(NavigationTitleStyle())
     }
 }
 

@@ -18,3 +18,15 @@ struct ListStyle: ViewModifier {
         #endif
     }
 }
+
+struct NavigationTitleStyle: ViewModifier {
+    @ViewBuilder
+    func body(content: Content) -> some View {
+        #if os(iOS)
+        content
+            .navigationBarTitleDisplayMode(.inline)
+        #else
+        content
+        #endif
+    }
+}
