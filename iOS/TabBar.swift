@@ -21,6 +21,23 @@ struct TabBar: View {
                         Label("trash", systemImage: "trash")
                     }
                 }
+                Section(
+                    header:
+                        HStack {
+                            Text("Закрепленные")
+                            Spacer()
+                            NavigationLink(destination: Text("Закрепленные")) {
+                                Text("Ещё")
+                            }
+                        },
+                    footer:
+                        Text("Закрепленные заметки будут отображаться в виджете.")
+                ) {
+                    Label("Тег", systemImage: "pin")
+                    Label("Тег", systemImage: "pin")
+                    Label("Тег", systemImage: "pin")
+                    Label("Тег", systemImage: "pin")
+                }
                 Section(header: Text("tags")) {
                     Label("Тег", systemImage: "tag")
                     Label("Тег", systemImage: "tag")
