@@ -44,12 +44,6 @@ struct NoteDetails: View {
     }
     
     var body: some View {
-        if note.isPin == true {
-            Text("Закрепленно")
-        }
-        if note.isDelete == true {
-            Text("Удалено")
-        }
         HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
             .onDisappear(perform: saveNote)
             .toolbar {

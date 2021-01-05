@@ -24,7 +24,11 @@ struct NoteList: View {
     
     private func deleteNote(offsets: IndexSet) {
         withAnimation {
-            offsets.map { notes[$0] }.forEach(moc.delete)
+            for index in offsets {
+                let note = notes[index]
+                note.isDelete = true
+                note.isPin = false
+            }
             do {
                 try moc.save()
             } catch {
@@ -33,21 +37,6 @@ struct NoteList: View {
             }
         }
     }
-    
-//    private func deleteNote(offsets: IndexSet) {
-//        withAnimation {
-//            for index in offsets {
-//                let note = notes[index]
-//                note.isDelete = true
-//            }
-//            do {
-//                try moc.save()
-//            } catch {
-//                let nsError = error as NSError
-//                print("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//        }
-//    }
     
     var body: some View {
         #if os(macOS)
@@ -64,8 +53,19 @@ struct NoteList: View {
         list
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button(action: {}) {
-                        Image(systemName: "plus")
+                    Menu {
+                        Section {
+                            Button(action: {}) {
+                                Label("Сортировка", systemImage: "pin")
+                            }
+                            Button(action: {}) {
+                                Label("Сортировка", systemImage: "trash")
+                            }
+                        }
+                    }
+                    label: {
+                        Label("Add", systemImage: "ellipsis.circle")
+                            .imageScale(.large)
                     }
                     Spacer()
                     Text("Заметок: \(notes.count)")
