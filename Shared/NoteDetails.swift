@@ -12,7 +12,7 @@ struct NoteDetails: View {
     @Environment(\.managedObjectContext) private var moc
     
     @State private var textNote: String = ""
-    @State private var isPin: Bool = true
+    @State private var isPin: Bool = false
     
     var note: Note
     
@@ -33,8 +33,8 @@ struct NoteDetails: View {
         }
     }
     
-    private func setPin() {
-        note.isPin = true
+    private func setPin(_ value: Bool) {
+        note.isPin = value
         do {
             try moc.save()
         } catch {
@@ -54,8 +54,8 @@ struct NoteDetails: View {
                             Text(note.changeDate, style: .date)
                         }
                         Section {
-                            Button(action: setPin) {
-                                Label("Закрепить", systemImage: "pin")
+                            Button(action: { setPin(note.isPin ? false : true) }) {
+                                Label(isPin ? "Открепить" : "Закрепить", systemImage: isPin ? "pin.slash" : "pin")
                             }
                             Button(action: {}) {
                                 Label("Удалить заметку", systemImage: "trash")
