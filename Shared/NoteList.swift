@@ -17,16 +17,14 @@ struct NoteList: View {
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: false)],
+        predicate: NSPredicate(format: "isDelete == NO"),
         animation: .default
     )
     private var notes: FetchedResults<Note>
     
     private func deleteNote(offsets: IndexSet) {
         withAnimation {
-            for index in offsets {
-                let note = notes[index]
-                note.isDelete = true
-            }
+            offsets.map { notes[$0] }.forEach(moc.delete)
             do {
                 try moc.save()
             } catch {
@@ -35,6 +33,21 @@ struct NoteList: View {
             }
         }
     }
+    
+//    private func deleteNote(offsets: IndexSet) {
+//        withAnimation {
+//            for index in offsets {
+//                let note = notes[index]
+//                note.isDelete = true
+//            }
+//            do {
+//                try moc.save()
+//            } catch {
+//                let nsError = error as NSError
+//                print("Unresolved error \(nsError), \(nsError.userInfo)")
+//            }
+//        }
+//    }
     
     var body: some View {
         #if os(macOS)

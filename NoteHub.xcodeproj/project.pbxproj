@@ -3,14 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CB3167A52591C79C00291DF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3167A82591C79C00291DF6 /* Localizable.strings */; };
 		CB3167A62591C79C00291DF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3167A82591C79C00291DF6 /* Localizable.strings */; };
+		CB42884C25A2FD4700D35C8B /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB42884B25A2FD4700D35C8B /* Purchases */; };
+		CB42885025A2FD5100D35C8B /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB42884F25A2FD5100D35C8B /* Purchases */; };
 		CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
 		CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
+		CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */; };
+		CB65DCE225A4104D00769A57 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */; };
+		CB65DCE525A4105300769A57 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */; };
 		CB698011258F4CA800E3C49E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698010258F4CA800E3C49E /* SideBar.swift */; };
 		CB698012258F4CA800E3C49E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698010258F4CA800E3C49E /* SideBar.swift */; };
 		CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698019258F4CDD00E3C49E /* SettingsView.swift */; };
@@ -26,10 +31,6 @@
 		CB8982792590DA1200830577 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8982782590DA1200830577 /* TabBar.swift */; };
 		CB8982812590E49D00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982802590E49D00830577 /* HighlightedTextEditor */; };
 		CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982842590E4AD00830577 /* HighlightedTextEditor */; };
-		CB9018532597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */; };
-		CB9018542597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */; };
-		CB9018552597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */; };
-		CB9018562597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */; };
 		CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */; };
@@ -56,6 +57,8 @@
 		CB3167A72591C79C00291DF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB3167AB2591C7A500291DF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB57C6C1258F34B500389C1E /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
+		CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB698010258F4CA800E3C49E /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		CB698019258F4CDD00E3C49E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CB698020258F4D0B00E3C49E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -63,8 +66,6 @@
 		CB720F71258C58CB001B65DC /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		CB720F76258C58FA001B65DC /* NoteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetails.swift; sourceTree = "<group>"; };
 		CB8982782590DA1200830577 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CBA119642589DFCA001ACFA6 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHubApp.swift; sourceTree = "<group>"; };
 		CBA119662589DFCA001ACFA6 /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 				CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */,
 				CBEE4FDF25931BDE0090DD9F /* NativeSearchBar in Frameworks */,
 				CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */,
+				CB42884C25A2FD4700D35C8B /* Purchases in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +103,7 @@
 				CB8982812590E49D00830577 /* HighlightedTextEditor in Frameworks */,
 				CBF94D4D2593966A002E3BF9 /* NativeSearchBar in Frameworks */,
 				CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */,
+				CB42885025A2FD5100D35C8B /* Purchases in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +113,8 @@
 		CB9018592597854F00C18DE3 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				CB9018522597848F00C18DE3 /* Note+CoreDataProperties.swift */,
-				CB9018512597848F00C18DE3 /* Note+CoreDataClass.swift */,
+				CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */,
+				CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */,
 				CBA119672589DFCA001ACFA6 /* Persistence.swift */,
 			);
 			path = CoreData;
@@ -207,6 +210,7 @@
 			packageProductDependencies = (
 				CB8982842590E4AD00830577 /* HighlightedTextEditor */,
 				CBEE4FDE25931BDE0090DD9F /* NativeSearchBar */,
+				CB42884B25A2FD4700D35C8B /* Purchases */,
 			);
 			productName = "NoteHub (iOS)";
 			productReference = CBA1196D2589DFCD001ACFA6 /* NoteHub.app */;
@@ -228,6 +232,7 @@
 			packageProductDependencies = (
 				CB8982802590E49D00830577 /* HighlightedTextEditor */,
 				CBF94D4C2593966A002E3BF9 /* NativeSearchBar */,
+				CB42884F25A2FD5100D35C8B /* Purchases */,
 			);
 			productName = "NoteHub (macOS)";
 			productReference = CBA119752589DFCD001ACFA6 /* NoteHub.app */;
@@ -251,7 +256,7 @@
 				};
 			};
 			buildConfigurationList = CBA119612589DFCA001ACFA6 /* Build configuration list for PBXProject "NoteHub" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -263,6 +268,7 @@
 			packageReferences = (
 				CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */,
 				CBEE4FDD25931BDE0090DD9F /* XCRemoteSwiftPackageReference "NativeSearchBar" */,
+				CB42884A25A2FD4700D35C8B /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = CBA1196E2589DFCD001ACFA6 /* Products */;
 			projectDirPath = "";
@@ -310,11 +316,11 @@
 				CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */,
-				CB9018552597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */,
+				CB65DCE225A4104D00769A57 /* Note+CoreDataProperties.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CBDA3DF725947E84005A24EC /* SettingsStore.swift in Sources */,
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
-				CB9018532597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */,
+				CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CB698023258F4D4900E3C49E /* RootView.swift in Sources */,
 			);
@@ -325,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB720F78258C58FA001B65DC /* NoteDetails.swift in Sources */,
-				CB9018542597848F00C18DE3 /* Note+CoreDataClass.swift in Sources */,
 				CB720F6C258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CBDA3DF825947E84005A24EC /* SettingsStore.swift in Sources */,
@@ -339,7 +344,7 @@
 				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CB698022258F4D4900E3C49E /* RootView.swift in Sources */,
-				CB9018562597848F00C18DE3 /* Note+CoreDataProperties.swift in Sources */,
+				CB65DCE525A4105300769A57 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = iphoneos;
@@ -507,6 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = iphoneos;
@@ -533,6 +540,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = macosx;
@@ -557,6 +565,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub;
 				PRODUCT_NAME = NoteHub;
 				SDKROOT = macosx;
@@ -597,6 +606,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB42884A25A2FD4700D35C8B /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.9.2;
+			};
+		};
 		CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kyle-n/HighlightedTextEditor";
@@ -616,6 +633,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB42884B25A2FD4700D35C8B /* Purchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB42884A25A2FD4700D35C8B /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = Purchases;
+		};
+		CB42884F25A2FD5100D35C8B /* Purchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB42884A25A2FD4700D35C8B /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = Purchases;
+		};
 		CB8982802590E49D00830577 /* HighlightedTextEditor */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB89827F2590E49D00830577 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */;

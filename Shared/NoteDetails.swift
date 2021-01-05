@@ -12,12 +12,14 @@ struct NoteDetails: View {
     @Environment(\.managedObjectContext) private var moc
     
     @State private var textNote: String = ""
+    @State private var isPin: Bool = true
     
     var note: Note
     
     init(note: Note) {
         self.note = note
         _textNote = State<String>(initialValue: note.textNote)
+        _isPin = State<Bool>(initialValue: note.isPin)
     }
     
     private func saveNote() {
@@ -31,7 +33,23 @@ struct NoteDetails: View {
         }
     }
     
+    private func setPin() {
+        note.isPin = true
+        do {
+            try moc.save()
+        } catch {
+            let nsError = error as NSError
+            print("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
     var body: some View {
+        if note.isPin == true {
+            Text("Закрепленно")
+        }
+        if note.isDelete == true {
+            Text("Удалено")
+        }
         HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
             .onDisappear(perform: saveNote)
             .toolbar {
@@ -42,7 +60,7 @@ struct NoteDetails: View {
                             Text(note.changeDate, style: .date)
                         }
                         Section {
-                            Button(action: {}) {
+                            Button(action: setPin) {
                                 Label("Закрепить", systemImage: "pin")
                             }
                             Button(action: {}) {
@@ -51,16 +69,11 @@ struct NoteDetails: View {
                         }
                     }
                     label: {
-                        Label("Add", systemImage: "plus")
+                        Label("Add", systemImage: "ellipsis.circle")
+                            .imageScale(.large)
                     }
                 }
             }
             .modifier(NavigationTitleStyle())
-    }
-}
-
-struct NoteDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        NoteDetails(note: Note())
     }
 }

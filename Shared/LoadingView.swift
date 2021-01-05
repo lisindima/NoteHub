@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoadingView<Content>: View where Content: View {
-    
     var notes: FetchedResults<Note>
     var title: String = ""
     var subTitle: String = ""

@@ -1,8 +1,8 @@
 //
 //  Note+CoreDataProperties.swift
-//  NoteHub
+//  NoteHub (iOS)
 //
-//  Created by Дмитрий Лисин on 26.12.2020.
+//  Created by Дмитрий Лисин on 05.01.2021.
 //
 //
 
@@ -14,10 +14,11 @@ public extension Note {
         NSFetchRequest<Note>(entityName: "Note")
     }
 
-    @NSManaged var id: UUID
     @NSManaged var changeDate: Date
     @NSManaged var createDate: Date
-    @NSManaged var isDelete: NSNumber
+    @NSManaged var id: UUID
+    @NSManaged var isDelete: Bool
+    @NSManaged var isPin: Bool
     @NSManaged var textNote: String
 }
 

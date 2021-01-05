@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct TabBar: View {
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: false)],
+        predicate: NSPredicate(format: "isPin == YES"),
+        animation: .default
+    )
+    private var notes: FetchedResults<Note>
+    
     @State private var openSettings: Bool = false
     
     var body: some View {
@@ -21,22 +28,28 @@ struct TabBar: View {
                         Label("trash", systemImage: "trash")
                     }
                 }
-                Section(
-                    header:
-                        HStack {
-                            Text("Закрепленные")
-                            Spacer()
-                            NavigationLink(destination: Text("Закрепленные")) {
-                                Text("Ещё")
+                if !notes.isEmpty {
+                    Section(
+                        header:
+                            HStack {
+                                Text("Закрепленные")
+                                Spacer()
+                                if notes.count >= 4 {
+                                    NavigationLink(destination: Text("Закрепленные")) {
+                                        Text("Ещё")
+                                            .fontWeight(.semibold)
+                                    }
+                                }
+                            },
+                        footer:
+                            Text("Закрепленные заметки будут отображаться в виджете.")
+                    ) {
+                        ForEach(notes.prefix(4), id: \.id) { note in
+                            NavigationLink(destination: NoteDetails(note: note)) {
+                                NoteItem(note: note)
                             }
-                        },
-                    footer:
-                        Text("Закрепленные заметки будут отображаться в виджете.")
-                ) {
-                    Label("Тег", systemImage: "pin")
-                    Label("Тег", systemImage: "pin")
-                    Label("Тег", systemImage: "pin")
-                    Label("Тег", systemImage: "pin")
+                        }
+                    }
                 }
                 Section(header: Text("tags")) {
                     Label("Тег", systemImage: "tag")

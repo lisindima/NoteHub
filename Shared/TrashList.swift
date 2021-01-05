@@ -14,7 +14,7 @@ struct TrashList: View {
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Note.createDate, ascending: false)],
-        predicate: NSPredicate(format: "isDelete == %@"),
+        predicate: NSPredicate(format: "isDelete == YES"),
         animation: .default
     )
     private var notes: FetchedResults<Note>
