@@ -19,8 +19,8 @@ struct CreateNote: View {
         note.id = UUID()
         note.createDate = Date()
         note.changeDate = Date()
-        note.isPin = true
-        note.isDelete = true
+        note.isPin = false
+        note.isDelete = false
         note.textNote = textNote
         do {
             try moc.save()
