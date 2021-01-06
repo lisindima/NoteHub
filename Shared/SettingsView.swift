@@ -16,11 +16,13 @@ struct SettingsView: View {
     
     var body: some View {
         Form {
+            #if !os(watchOS)
             Section(header: Text("Кастомизация")) {
                 ColorPicker(selection: $settingsStore.accentColor, supportsOpacity: true) {
                     Label("Цветовой акцент", systemImage: "paintbrush")
                 }
             }
+            #endif
             Section {
                 Button(action: openAboutApp) {
                     Label("О приложении", systemImage: "info.circle")

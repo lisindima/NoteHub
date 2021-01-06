@@ -39,17 +39,7 @@ struct NoteList: View {
     }
     
     var body: some View {
-        #if os(macOS)
-        list
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button(action: { showCreateNote = true }) {
-                        Image(systemName: "plus")
-                    }
-                    .help("Беебебебебеб")
-                }
-            }
-        #else
+        #if os(iOS)
         list
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
@@ -74,6 +64,16 @@ struct NoteList: View {
                     Button(action: { showCreateNote = true }) {
                         Image(systemName: "doc.badge.plus")
                     }
+                }
+            }
+        #else
+        list
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: { showCreateNote = true }) {
+                        Image(systemName: "plus")
+                    }
+                    .help("Беебебебебеб")
                 }
             }
         #endif

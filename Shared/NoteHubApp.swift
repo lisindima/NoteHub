@@ -20,9 +20,6 @@ struct NoteHubApp: App {
                 .environmentObject(settingsStore)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
-        .commands {
-            SidebarCommands()
-        }
         #if os(macOS)
         Settings {
             SettingsView()

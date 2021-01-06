@@ -5,7 +5,9 @@
 //  Created by Дмитрий Лисин on 18.12.2020.
 //
 
+#if !os(watchOS)
 import HighlightedTextEditor
+#endif
 import SwiftUI
 
 struct NoteDetails: View {
@@ -44,6 +46,7 @@ struct NoteDetails: View {
     }
     
     var body: some View {
+        #if !os(watchOS)
         HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
             .onDisappear(perform: saveNote)
             .toolbar {
@@ -69,5 +72,6 @@ struct NoteDetails: View {
                 }
             }
             .modifier(NavigationTitleStyle())
+        #endif
     }
 }

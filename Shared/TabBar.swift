@@ -58,7 +58,7 @@ struct TabBar: View {
                     Label("Тег", systemImage: "tag")
                 }
             }
-            .listStyle(InsetGroupedListStyle())
+            .modifier(ListStyle())
             .navigationTitle("NoteHub")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
