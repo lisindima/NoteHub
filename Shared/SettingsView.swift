@@ -10,12 +10,18 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject private var settingsStore: SettingsStore
     
-    @State private var openSheetAboutApp: Bool = false
+    @State private var openSubscriptionView: Bool = false
     
     private func openAboutApp() {}
     
     var body: some View {
         Form {
+            Section {
+                Button(action: { openSubscriptionView = true }) {
+                    Label("Обновление до NoteHub Plus", systemImage: "plus.app.fill")
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
             #if !os(watchOS)
             Section(header: Text("Кастомизация")) {
                 ColorPicker(selection: $settingsStore.accentColor, supportsOpacity: true) {
@@ -31,6 +37,9 @@ struct SettingsView: View {
             }
         }
         .navigationTitle("settings")
+        .sheet(isPresented: $openSubscriptionView) {
+            SubscriptionView()
+        }
     }
 }
 

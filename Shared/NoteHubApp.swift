@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Purchases
 
 @main
 struct NoteHubApp: App {
     @StateObject private var settingsStore = SettingsStore.shared
     
     let persistenceController = PersistenceController.shared
+    
+    init() {
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: "KqxRlxVJObhJFLWuNPVVPZzhckgXHjtZ")
+    }
     
     var body: some Scene {
         WindowGroup {

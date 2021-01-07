@@ -18,6 +18,12 @@
 		CB42885025A2FD5100D35C8B /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB42884F25A2FD5100D35C8B /* Purchases */; };
 		CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
 		CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
+		CB5CA24825A770EB00CD3B71 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */; };
+		CB5CA24925A770EB00CD3B71 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */; };
+		CB5CA24A25A770EB00CD3B71 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */; };
+		CB5CA25025A779C800CD3B71 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5CA24F25A779C800CD3B71 /* StoreKit.framework */; };
+		CB5CA25225A779D900CD3B71 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5CA25125A779D900CD3B71 /* StoreKit.framework */; };
+		CB5CA25525A779F300CD3B71 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5CA25425A779F300CD3B71 /* CloudKit.framework */; };
 		CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */; };
 		CB65DCE225A4104D00769A57 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */; };
 		CB65DCE525A4105300769A57 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */; };
@@ -112,6 +118,11 @@
 		CB3167AB2591C7A500291DF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTab.swift; sourceTree = "<group>"; };
 		CB57C6C1258F34B500389C1E /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
+		CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		CB5CA24F25A779C800CD3B71 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		CB5CA25125A779D900CD3B71 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CB5CA25325A779EC00CD3B71 /* NoteHub (watchOS Extension).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NoteHub (watchOS Extension).entitlements"; sourceTree = "<group>"; };
+		CB5CA25425A779F300CD3B71 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB698010258F4CA800E3C49E /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
@@ -155,6 +166,7 @@
 			files = (
 				CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */,
 				CBEE4FDF25931BDE0090DD9F /* NativeSearchBar in Frameworks */,
+				CB5CA25025A779C800CD3B71 /* StoreKit.framework in Frameworks */,
 				CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */,
 				CB42884C25A2FD4700D35C8B /* Purchases in Frameworks */,
 			);
@@ -166,6 +178,7 @@
 			files = (
 				CB8982812590E49D00830577 /* HighlightedTextEditor in Frameworks */,
 				CBF94D4D2593966A002E3BF9 /* NativeSearchBar in Frameworks */,
+				CB5CA25225A779D900CD3B71 /* StoreKit.framework in Frameworks */,
 				CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */,
 				CB42885025A2FD5100D35C8B /* Purchases in Frameworks */,
 			);
@@ -175,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5CA25525A779F300CD3B71 /* CloudKit.framework in Frameworks */,
 				CBF3B95325A57FD500D84D05 /* NativeSearchBar in Frameworks */,
 				CB3413B625A5BF5A00680CBA /* Purchases in Frameworks */,
 			);
@@ -196,6 +210,7 @@
 		CBA1195D2589DFCA001ACFA6 = {
 			isa = PBXGroup;
 			children = (
+				CB5CA25325A779EC00CD3B71 /* NoteHub (watchOS Extension).entitlements */,
 				CBA119622589DFCA001ACFA6 /* Shared */,
 				CBA1196F2589DFCD001ACFA6 /* iOS */,
 				CBA119762589DFCD001ACFA6 /* macOS */,
@@ -215,6 +230,7 @@
 				CB8982782590DA1200830577 /* TabBar.swift */,
 				CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */,
 				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
+				CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */,
 				CBDA3DF625947E84005A24EC /* SettingsStore.swift */,
 				CB698020258F4D0B00E3C49E /* RootView.swift */,
 				CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */,
@@ -263,6 +279,9 @@
 		CBCD4B6A258B8A1400FFF109 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB5CA25425A779F300CD3B71 /* CloudKit.framework */,
+				CB5CA25125A779D900CD3B71 /* StoreKit.framework */,
+				CB5CA24F25A779C800CD3B71 /* StoreKit.framework */,
 				CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */,
 				CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */,
 			);
@@ -483,6 +502,7 @@
 				CB720F6B258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CB8982792590DA1200830577 /* TabBar.swift in Sources */,
+				CB5CA24825A770EB00CD3B71 /* SubscriptionView.swift in Sources */,
 				CBD5AF0E25A06E2D0090FB9F /* LoadingView.swift in Sources */,
 				CB720F72258C58CB001B65DC /* NoteItem.swift in Sources */,
 				CBA1197F2589DFCD001ACFA6 /* Persistence.swift in Sources */,
@@ -508,6 +528,7 @@
 				CB720F6C258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CBDA3DF825947E84005A24EC /* SettingsStore.swift in Sources */,
+				CB5CA24925A770EB00CD3B71 /* SubscriptionView.swift in Sources */,
 				CBD5AF0F25A06E2D0090FB9F /* LoadingView.swift in Sources */,
 				CB720F73258C58CB001B65DC /* NoteItem.swift in Sources */,
 				CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */,
@@ -533,6 +554,7 @@
 				CBF3B8F925A57E6700D84D05 /* SettingsView.swift in Sources */,
 				CBF3B94725A57E9D00D84D05 /* TabBar.swift in Sources */,
 				CBF3B96A25A5837300D84D05 /* RootView.swift in Sources */,
+				CB5CA24A25A770EB00CD3B71 /* SubscriptionView.swift in Sources */,
 				CBF3B92F25A57E8600D84D05 /* Modifier.swift in Sources */,
 				CBF3B91725A57E7900D84D05 /* TrashList.swift in Sources */,
 				CBF3B93525A57E8B00D84D05 /* NoteHub.xcdatamodeld in Sources */,
@@ -845,6 +867,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "NoteHub (watchOS Extension).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
@@ -870,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "NoteHub (watchOS Extension).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
