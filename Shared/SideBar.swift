@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SideBar: View {
-    @State private var selection: NavigationItem? = .note
     @State private var openSettings: Bool = false
     
     #if os(macOS)
@@ -18,23 +17,8 @@ struct SideBar: View {
     #endif
     
     var sidebar: some View {
-        List(selection: $selection) {
-            Section(header: Text("general")) {
-                NavigationLink(destination: NoteList()) {
-                    Label("notes", systemImage: "note")
-                }
-                .tag(NavigationItem.note)
-                NavigationLink(destination: TrashList()) {
-                    Label("trash", systemImage: "trash")
-                }
-                .tag(NavigationItem.trash)
-            }
-            Section(header: Text("tags")) {
-                Label("Тег", systemImage: "tag")
-                Label("Тег", systemImage: "tag")
-                Label("Тег", systemImage: "tag")
-                Label("Тег", systemImage: "tag")
-            }
+        List {
+            SectionTab()
         }
         .listStyle(SidebarListStyle())
         .navigationTitle("NoteHub")

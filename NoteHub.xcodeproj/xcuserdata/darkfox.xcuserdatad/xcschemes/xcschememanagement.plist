@@ -29,15 +29,18 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>NoteHub (watchOS) (Complication).xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
 		<key>NoteHub (watchOS).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CBF3B7DD25A57A5E00D84D05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

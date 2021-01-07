@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		CB3167A52591C79C00291DF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3167A82591C79C00291DF6 /* Localizable.strings */; };
 		CB3167A62591C79C00291DF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3167A82591C79C00291DF6 /* Localizable.strings */; };
+		CB3413B625A5BF5A00680CBA /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB3413B525A5BF5A00680CBA /* Purchases */; };
+		CB38EDD125A6BEE30053BFA3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8982782590DA1200830577 /* TabBar.swift */; };
+		CB38EDD825A6C0C80053BFA3 /* SectionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */; };
+		CB38EDD925A6C0C80053BFA3 /* SectionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */; };
+		CB38EDDA25A6C0C80053BFA3 /* SectionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */; };
 		CB42884C25A2FD4700D35C8B /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB42884B25A2FD4700D35C8B /* Purchases */; };
 		CB42885025A2FD5100D35C8B /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB42884F25A2FD5100D35C8B /* Purchases */; };
 		CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
@@ -105,6 +110,7 @@
 /* Begin PBXFileReference section */
 		CB3167A72591C79C00291DF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB3167AB2591C7A500291DF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTab.swift; sourceTree = "<group>"; };
 		CB57C6C1258F34B500389C1E /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
 		CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF3B95325A57FD500D84D05 /* NativeSearchBar in Frameworks */,
+				CB3413B625A5BF5A00680CBA /* Purchases in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +213,7 @@
 				CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */,
 				CB698010258F4CA800E3C49E /* SideBar.swift */,
 				CB8982782590DA1200830577 /* TabBar.swift */,
+				CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */,
 				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
 				CBDA3DF625947E84005A24EC /* SettingsStore.swift */,
 				CB698020258F4D0B00E3C49E /* RootView.swift */,
@@ -369,6 +377,7 @@
 			name = "NoteHub (watchOS Extension)";
 			packageProductDependencies = (
 				CBF3B95225A57FD500D84D05 /* NativeSearchBar */,
+				CB3413B525A5BF5A00680CBA /* Purchases */,
 			);
 			productName = "NoteHub (watch) WatchKit Extension";
 			productReference = CBF3B7EA25A57A6000D84D05 /* NoteHub (watchOS Extension).appex */;
@@ -391,6 +400,7 @@
 					};
 					CBF3B7DD25A57A5E00D84D05 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					CBF3B7E925A57A6000D84D05 = {
 						CreatedOnToolsVersion = 12.3;
@@ -482,6 +492,7 @@
 				CB65DCE225A4104D00769A57 /* Note+CoreDataProperties.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CBDA3DF725947E84005A24EC /* SettingsStore.swift in Sources */,
+				CB38EDD825A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
@@ -500,11 +511,13 @@
 				CBD5AF0F25A06E2D0090FB9F /* LoadingView.swift in Sources */,
 				CB720F73258C58CB001B65DC /* NoteItem.swift in Sources */,
 				CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */,
+				CB38EDD125A6BEE30053BFA3 /* TabBar.swift in Sources */,
 				CB69801B258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197C2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBEE4FDA25930E430090DD9F /* Modifier.swift in Sources */,
 				CBA1197E2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
+				CB38EDD925A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CBF3B8E125A57E4600D84D05 /* Note+CoreDataClass.swift in Sources */,
 				CB698022258F4D4900E3C49E /* RootView.swift in Sources */,
@@ -529,6 +542,7 @@
 				CBF3B8FF25A57E6A00D84D05 /* SettingsStore.swift in Sources */,
 				CBF3B8ED25A57E5000D84D05 /* Persistence.swift in Sources */,
 				CBF3B92325A57E7F00D84D05 /* NoteDetails.swift in Sources */,
+				CB38EDDA25A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CBF3B91D25A57E7C00D84D05 /* NoteItem.swift in Sources */,
 				CBF3B7F425A57A6000D84D05 /* ComplicationController.swift in Sources */,
 				CBF3B8E725A57E4B00D84D05 /* Note+CoreDataProperties.swift in Sources */,
@@ -775,15 +789,23 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				IBSC_MODULE = NoteHub__watch__WatchKit_Extension;
 				INFOPLIST_FILE = watchOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/NoteHub (watchOS)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.2;
@@ -796,15 +818,22 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
 				IBSC_MODULE = NoteHub__watch__WatchKit_Extension;
 				INFOPLIST_FILE = watchOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darkfox.notehub.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/NoteHub (watchOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
@@ -941,6 +970,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB3413B525A5BF5A00680CBA /* Purchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB42884A25A2FD4700D35C8B /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = Purchases;
+		};
 		CB42884B25A2FD4700D35C8B /* Purchases */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB42884A25A2FD4700D35C8B /* XCRemoteSwiftPackageReference "purchases-ios" */;
