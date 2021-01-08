@@ -39,6 +39,18 @@ struct SubscriptionView: View {
         }
     }
     
+    private func restoreSubscription() {
+        Purchases.shared.restoreTransactions { purchaserInfo, error in
+            if let error = error {
+                alertItem = AlertItem(title: "Ошибка", message: error.localizedDescription)
+            } else {
+                if purchaserInfo != nil {
+                    alertItem = AlertItem(title: "Успешно", message: "Подписка восстановлена")
+                }
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -87,7 +99,7 @@ struct SubscriptionView: View {
             .padding(.top, 8)
             .padding(.horizontal)
             HStack {
-                Button(action: {}) {
+                Button(action: restoreSubscription) {
                     Text("Восстановить платеж")
                         .font(.footnote)
                 }
