@@ -9,6 +9,36 @@ import SwiftUI
 import Purchases
 
 struct SubscriptionView: View {
+    @State private var yearPrice: String = ""
+    @State private var mountlyPrice: String = ""
+    @State private var alertItem: AlertItem?
+    @State private var offering: Purchases.Offering?
+    
+    private func fetchProduct() {
+        Purchases.shared.offerings { offerings, error in
+            if let error = error {
+                alertItem = AlertItem(title: "Ошибка", message: error.localizedDescription)
+            }
+            if let currentOffering = offerings?.current {
+                offering = currentOffering
+            }
+            if let package = offerings?.current?.monthly?.localizedPriceString {
+                mountlyPrice = package
+            }
+            if let package = offerings?.current?.annual?.localizedPriceString {
+                yearPrice = package
+            }
+        }
+    }
+    
+    private func buySubscription(_ package: Purchases.Package) {
+        Purchases.shared.purchasePackage(package) { transaction, purchaserInfo, error, userCancelled in
+            if purchaserInfo?.entitlements.active != nil {
+                alertItem = AlertItem(title: "Успешно", message: "Подписка оформлена")
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -20,36 +50,39 @@ struct SubscriptionView: View {
             }
             Spacer()
             HStack {
-                Button(action: {}) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.accentColor.opacity(0.2))
-                            .frame(maxWidth: .infinity, maxHeight: 72)
-                        VStack {
-                            Text("Ежемесячно")
-                                .fontWeight(.bold)
-                                .font(.system(size: 16))
-                            Text("test")
+                if let monthly = offering?.monthly {
+                    Button(action: { buySubscription(monthly) }) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.accentColor.opacity(0.2))
+                                .frame(maxWidth: .infinity, maxHeight: 72)
+                            VStack {
+                                Text("Ежемесячно")
+                                    .fontWeight(.bold)
+                                    .font(.system(size: 16))
+                                Text(mountlyPrice)
+                            }
                         }
                     }
+                    .padding(.trailing, 4)
                 }
-                .padding(.trailing, 4)
-                Button(action: {}) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(maxWidth: .infinity, maxHeight: 72)
-                        VStack {
-                            Text("Ежегодно")
-                                .fontWeight(.bold)
-                                .font(.system(size: 16))
-                                .foregroundColor(.white)
-                                .fixedSize(horizontal: false, vertical: true)
-                            Text("test")
-                                .foregroundColor(.white)
+                if let annual = offering?.annual {
+                    Button(action: { buySubscription(annual) }) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(maxWidth: .infinity, maxHeight: 72)
+                            VStack {
+                                Text("Ежегодно")
+                                    .fontWeight(.bold)
+                                    .font(.system(size: 16))
+                                    .foregroundColor(.white)
+                                Text(yearPrice)
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
+                    .padding(.leading, 4)
                 }
-                .padding(.leading, 4)
             }
             .padding(.top, 8)
             .padding(.horizontal)
@@ -66,8 +99,11 @@ struct SubscriptionView: View {
                     .font(.footnote)
                 Link("Правила", destination: URL(string: "https://apple.com")!)
                     .font(.footnote)
-            }.padding(.vertical)
+            }
+            .padding(.vertical)
         }
+        .onAppear(perform: fetchProduct)
+        .customAlert(item: $alertItem)
     }
 }
 
@@ -110,9 +146,9 @@ struct SubscriptionContainerView: View {
 }
 
 struct InformationDetailView: View {
-    var title: String = "title"
-    var subTitle: String = "subTitle"
-    var imageName: String = "car"
+    var title: String
+    var subTitle: String
+    var imageName: String
     
     var body: some View {
         HStack {

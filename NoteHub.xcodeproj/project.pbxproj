@@ -58,6 +58,9 @@
 		CBD5AF0F25A06E2D0090FB9F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */; };
 		CBDA3DF725947E84005A24EC /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3DF625947E84005A24EC /* SettingsStore.swift */; };
 		CBDA3DF825947E84005A24EC /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3DF625947E84005A24EC /* SettingsStore.swift */; };
+		CBE4638B25A8229A0033C31F /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4638A25A8229A0033C31F /* CustomAlert.swift */; };
+		CBE4638C25A8229A0033C31F /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4638A25A8229A0033C31F /* CustomAlert.swift */; };
+		CBE4638D25A8229A0033C31F /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4638A25A8229A0033C31F /* CustomAlert.swift */; };
 		CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
 		CBEE4FDA25930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
 		CBEE4FDF25931BDE0090DD9F /* NativeSearchBar in Frameworks */ = {isa = PBXBuildFile; productRef = CBEE4FDE25931BDE0090DD9F /* NativeSearchBar */; };
@@ -147,6 +150,7 @@
 		CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CBDA3DF625947E84005A24EC /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		CBE4638A25A8229A0033C31F /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		CBEE4FD825930E430090DD9F /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		CBF3B7DE25A57A5E00D84D05 /* NoteHub (watchOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoteHub (watchOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF3B7E325A57A6000D84D05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 				CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */,
 				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
 				CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */,
+				CBE4638A25A8229A0033C31F /* CustomAlert.swift */,
 				CBDA3DF625947E84005A24EC /* SettingsStore.swift */,
 				CB698020258F4D0B00E3C49E /* RootView.swift */,
 				CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */,
@@ -517,6 +522,7 @@
 				CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CB698023258F4D4900E3C49E /* RootView.swift in Sources */,
+				CBE4638B25A8229A0033C31F /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +549,7 @@
 				CBF3B8E125A57E4600D84D05 /* Note+CoreDataClass.swift in Sources */,
 				CB698022258F4D4900E3C49E /* RootView.swift in Sources */,
 				CB65DCE525A4105300769A57 /* Note+CoreDataProperties.swift in Sources */,
+				CBE4638C25A8229A0033C31F /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +576,7 @@
 				CBF3B7F425A57A6000D84D05 /* ComplicationController.swift in Sources */,
 				CBF3B8E725A57E4B00D84D05 /* Note+CoreDataProperties.swift in Sources */,
 				CBF3B91125A57E7600D84D05 /* NoteList.swift in Sources */,
+				CBE4638D25A8229A0033C31F /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
