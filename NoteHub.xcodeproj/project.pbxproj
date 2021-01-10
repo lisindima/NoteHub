@@ -214,7 +214,6 @@
 		CBA1195D2589DFCA001ACFA6 = {
 			isa = PBXGroup;
 			children = (
-				CB5CA25325A779EC00CD3B71 /* NoteHub (watchOS Extension).entitlements */,
 				CBA119622589DFCA001ACFA6 /* Shared */,
 				CBA1196F2589DFCD001ACFA6 /* iOS */,
 				CBA119762589DFCD001ACFA6 /* macOS */,
@@ -307,6 +306,7 @@
 			children = (
 				CBF3B95E25A5835300D84D05 /* RootView.swift */,
 				CBF3B7F325A57A6000D84D05 /* ComplicationController.swift */,
+				CB5CA25325A779EC00CD3B71 /* NoteHub (watchOS Extension).entitlements */,
 				CBF3B7F525A57A6100D84D05 /* Assets.xcassets */,
 				CBF3B7FA25A57A6100D84D05 /* Info.plist */,
 				CBF3B7F725A57A6100D84D05 /* Preview Content */,
@@ -875,7 +875,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "NoteHub (watchOS Extension).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "watchOS Extension/NoteHub (watchOS Extension).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 48HFZR3X8K;
@@ -901,7 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "NoteHub (watchOS Extension).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "watchOS Extension/NoteHub (watchOS Extension).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 48HFZR3X8K;

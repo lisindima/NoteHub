@@ -12,7 +12,6 @@ import SwiftUI
 struct NoteList: View {
     @Environment(\.managedObjectContext) private var moc
     
-    @State private var showCreateNote: Bool = false
     @State private var searchText: String = ""
     
     @FetchRequest(
@@ -39,47 +38,6 @@ struct NoteList: View {
     }
     
     var body: some View {
-        #if os(iOS)
-        list
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Menu {
-                        Section {
-                            Button(action: {}) {
-                                Label("Сортировка", systemImage: "pin")
-                            }
-                            Button(action: {}) {
-                                Label("Сортировка", systemImage: "trash")
-                            }
-                        }
-                    }
-                    label: {
-                        Label("Add", systemImage: "ellipsis.circle")
-                            .imageScale(.large)
-                    }
-                    Spacer()
-                    Text("Заметок: \(notes.count)")
-                        .font(.caption)
-                    Spacer()
-                    Button(action: { showCreateNote = true }) {
-                        Image(systemName: "doc.badge.plus")
-                    }
-                }
-            }
-        #else
-        list
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button(action: { showCreateNote = true }) {
-                        Image(systemName: "plus")
-                    }
-                    .help("Беебебебебеб")
-                }
-            }
-        #endif
-    }
-    
-    var list: some View {
         LoadingView(notes, title: "Нет заметок", subTitle: "Что то еще дописать....") { notes in
             List {
                 ForEach(notes.filter {
@@ -95,9 +53,14 @@ struct NoteList: View {
             .navigationSearchBar("Поиск заметок", searchText: $searchText)
         }
         .navigationTitle("notes")
-        .sheet(isPresented: $showCreateNote) {
-            CreateNote()
-                .accentColor(.purple)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                NavigationLink(destination: CreateNote()) {
+                    Image(systemName: "plus.circle.fill")
+                        .imageScale(.large)
+                }
+                .help("Создать новую заметку")
+            }
         }
     }
 }
