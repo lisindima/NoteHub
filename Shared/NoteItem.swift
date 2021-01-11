@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NoteItem: View {
-    var note: Note
+    @ObservedObject var note: Note
     
     var body: some View {
         VStack(alignment: .leading) {

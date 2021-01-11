@@ -23,11 +23,9 @@ struct NoteList: View {
     
     private func deleteNote(offsets: IndexSet) {
         withAnimation {
-            for index in offsets {
-                let note = notes[index]
-                note.isDelete = true
-                note.isPin = false
-            }
+            let note = notes[offsets.first!]
+            note.isDelete = true
+            note.isPin = false
             do {
                 try moc.save()
             } catch {
