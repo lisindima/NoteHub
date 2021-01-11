@@ -12,6 +12,7 @@ import SwiftUI
 
 struct NoteDetails: View {
     @Environment(\.managedObjectContext) private var moc
+    @Environment(\.presentationMode) private var presentationMode
     
     @State private var textNote: String = ""
     @State private var isPin: Bool = false
@@ -35,6 +36,18 @@ struct NoteDetails: View {
         }
     }
     
+    private func deleteNote() {
+        note.isDelete = true
+        note.isPin = false
+        do {
+            try moc.save()
+            presentationMode.wrappedValue.dismiss()
+        } catch {
+            let nsError = error as NSError
+            print("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
     private func setPin(_ value: Bool) {
         note.isPin = value
         do {
@@ -46,7 +59,16 @@ struct NoteDetails: View {
     }
     
     var body: some View {
-        #if !os(watchOS)
+        #if os(watchOS)
+        ScrollView {
+            HStack {
+                Text(note.textNote)
+                    .font(.caption)
+                Spacer()
+            }
+        }
+        .onDisappear(perform: saveNote)
+        #else
         HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
             .onDisappear(perform: saveNote)
             .toolbar {
@@ -60,7 +82,7 @@ struct NoteDetails: View {
                             Button(action: { setPin(note.isPin ? false : true) }) {
                                 Label(isPin ? "Открепить" : "Закрепить", systemImage: isPin ? "pin.slash" : "pin")
                             }
-                            Button(action: {}) {
+                            Button(action: deleteNote) {
                                 Label("Удалить заметку", systemImage: "trash")
                             }
                         }

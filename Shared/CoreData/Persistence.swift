@@ -16,6 +16,11 @@ struct PersistenceController {
         for _ in 0 ..< 10 {
             let newItem = Note(context: viewContext)
             newItem.createDate = Date()
+            newItem.changeDate = Date()
+            newItem.id = UUID()
+            newItem.isDelete = false
+            newItem.isPin = false
+            newItem.textNote = "Заметка"
         }
         do {
             try viewContext.save()

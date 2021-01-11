@@ -52,6 +52,7 @@ struct NoteList: View {
         }
         .navigationTitle("notes")
         .toolbar {
+            #if !os(watchOS)
             ToolbarItem(placement: .primaryAction) {
                 NavigationLink(destination: CreateNote()) {
                     Image(systemName: "plus.circle.fill")
@@ -59,6 +60,7 @@ struct NoteList: View {
                 }
                 .help("Создать новую заметку")
             }
+            #endif
         }
     }
 }
