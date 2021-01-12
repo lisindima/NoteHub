@@ -52,6 +52,52 @@ struct SubscriptionView: View {
     }
     
     var body: some View {
+        #if os(watchOS)
+        watch
+        #else
+        other
+        #endif
+    }
+    
+    var watch: some View {
+        ScrollView {
+            SubscriptionTitleView()
+                .padding(.bottom)
+            SubscriptionContainerView()
+                .padding(.bottom)
+            if let monthly = offering?.monthly {
+                SubscriptionButton(
+                    title: "Ежемесячно",
+                    subTitle: mountlyPrice,
+                    colorButton: Color.accentColor.opacity(0.2),
+                    colorText: .accentColor,
+                    action: { buySubscription(monthly) }
+                )
+            }
+            if let annual = offering?.annual {
+                SubscriptionButton(
+                    title: "Ежегодно",
+                    subTitle: yearPrice,
+                    colorButton: .accentColor,
+                    colorText: .white,
+                    action: { buySubscription(annual) }
+                )
+            }
+            Button(action: restoreSubscription) {
+                Text("Восстановить платеж")
+                    .font(.footnote)
+            }
+            .padding(.top)
+            Link("Политика", destination: URL(string: "https://apple.com")!)
+                .font(.footnote)
+            Link("Правила", destination: URL(string: "https://apple.com")!)
+                .font(.footnote)
+        }
+        .onAppear(perform: fetchProduct)
+        .customAlert(item: $alertItem)
+    }
+    
+    var other: some View {
         VStack {
             ScrollView {
                 SubscriptionTitleView()
@@ -63,36 +109,23 @@ struct SubscriptionView: View {
             Spacer()
             HStack {
                 if let monthly = offering?.monthly {
-                    Button(action: { buySubscription(monthly) }) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.accentColor.opacity(0.2))
-                                .frame(maxWidth: .infinity, maxHeight: 72)
-                            VStack {
-                                Text("Ежемесячно")
-                                    .fontWeight(.bold)
-                                    .font(.system(size: 16))
-                                Text(mountlyPrice)
-                            }
-                        }
-                    }
+                    SubscriptionButton(
+                        title: "Ежемесячно",
+                        subTitle: mountlyPrice,
+                        colorButton: Color.accentColor.opacity(0.2),
+                        colorText: .accentColor,
+                        action: { buySubscription(monthly) }
+                    )
                     .padding(.trailing, 4)
                 }
                 if let annual = offering?.annual {
-                    Button(action: { buySubscription(annual) }) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .frame(maxWidth: .infinity, maxHeight: 72)
-                            VStack {
-                                Text("Ежегодно")
-                                    .fontWeight(.bold)
-                                    .font(.system(size: 16))
-                                    .foregroundColor(.white)
-                                Text(yearPrice)
-                                    .foregroundColor(.white)
-                            }
-                        }
-                    }
+                    SubscriptionButton(
+                        title: "Ежегодно",
+                        subTitle: yearPrice,
+                        colorButton: .accentColor,
+                        colorText: .white,
+                        action: { buySubscription(annual) }
+                    )
                     .padding(.leading, 4)
                 }
             }
@@ -116,67 +149,5 @@ struct SubscriptionView: View {
         }
         .onAppear(perform: fetchProduct)
         .customAlert(item: $alertItem)
-    }
-}
-
-struct SubscriptionTitleView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "plus.app.fill")
-                .resizable()
-                .frame(width: 70, height: 70)
-                .foregroundColor(.accentColor)
-            HStack {
-                Text("NoteHub")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                Text("Plus")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.accentColor)
-            }
-            Text("После приобретения подписки вы получите больше функций для еще лучшего опыта использования приложения.")
-                .font(.system(size: 14))
-                .multilineTextAlignment(.center)
-                .padding(.top)
-                .padding(.horizontal)
-        }
-    }
-}
-
-struct SubscriptionContainerView: View {
-    var body: some View {
-        VStack(alignment: .leading) {
-            InformationDetailView(title: "Изменение иконки", subTitle: "Измените стандартную иконку приложения на любую другую, которая придется по вкусу!", imageName: "app")
-            InformationDetailView(title: "Изменение цвета акцентов", subTitle: "Вы сможете менять цвет акцентов в приложении, на абсолютно любой!", imageName: "paintbrush")
-            InformationDetailView(title: "Тёмная тема", subTitle: "Темная тема теперь всегда! Конечно, если вы этого захотите)", imageName: "moon")
-            InformationDetailView(title: "Удаление рекламы", subTitle: "Полное удаление рекламы из приложения.", imageName: "tag")
-            InformationDetailView(title: "Поддержка", subTitle: "Оформляя подписку вы поддерживаете разработчика и позволяете развиваться приложению.", imageName: "heart")
-        }
-        .padding(.horizontal)
-    }
-}
-
-struct InformationDetailView: View {
-    var title: String
-    var subTitle: String
-    var imageName: String
-    
-    var body: some View {
-        HStack {
-            Image(systemName: imageName)
-                .foregroundColor(.accentColor)
-                .font(.largeTitle)
-                .frame(width: 30)
-                .padding()
-            VStack(alignment: .leading) {
-                Text(title)
-                    .font(.headline)
-                    .foregroundColor(.primary)
-                Text(subTitle)
-                    .font(.body)
-                    .foregroundColor(.secondary)
-            }
-        }
     }
 }

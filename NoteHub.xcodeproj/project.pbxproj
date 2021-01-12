@@ -14,6 +14,12 @@
 		CB38EDD825A6C0C80053BFA3 /* SectionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */; };
 		CB38EDD925A6C0C80053BFA3 /* SectionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */; };
 		CB38EDDA25A6C0C80053BFA3 /* SectionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */; };
+		CB405CB225AD9ACE00370D87 /* SubscriptionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB405CB125AD9ACE00370D87 /* SubscriptionTitleView.swift */; };
+		CB405CB325AD9ACE00370D87 /* SubscriptionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB405CB125AD9ACE00370D87 /* SubscriptionTitleView.swift */; };
+		CB405CB425AD9ACE00370D87 /* SubscriptionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB405CB125AD9ACE00370D87 /* SubscriptionTitleView.swift */; };
+		CB405CBA25AD9B0100370D87 /* InformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB405CB925AD9B0100370D87 /* InformationDetailView.swift */; };
+		CB405CBB25AD9B0100370D87 /* InformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB405CB925AD9B0100370D87 /* InformationDetailView.swift */; };
+		CB405CBC25AD9B0100370D87 /* InformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB405CB925AD9B0100370D87 /* InformationDetailView.swift */; };
 		CB42884C25A2FD4700D35C8B /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB42884B25A2FD4700D35C8B /* Purchases */; };
 		CB42885025A2FD5100D35C8B /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CB42884F25A2FD5100D35C8B /* Purchases */; };
 		CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57C6C1258F34B500389C1E /* CreateNote.swift */; };
@@ -42,6 +48,12 @@
 		CB8982792590DA1200830577 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8982782590DA1200830577 /* TabBar.swift */; };
 		CB8982812590E49D00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982802590E49D00830577 /* HighlightedTextEditor */; };
 		CB8982852590E4AD00830577 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = CB8982842590E4AD00830577 /* HighlightedTextEditor */; };
+		CB9649AF25ADDAFD0051FE54 /* SubscriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9649AE25ADDAFD0051FE54 /* SubscriptionButton.swift */; };
+		CB9649B025ADDAFD0051FE54 /* SubscriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9649AE25ADDAFD0051FE54 /* SubscriptionButton.swift */; };
+		CB9649B125ADDAFD0051FE54 /* SubscriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9649AE25ADDAFD0051FE54 /* SubscriptionButton.swift */; };
+		CB9649B725ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9649B625ADE1C00051FE54 /* SubscriptionContainerView.swift */; };
+		CB9649B825ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9649B625ADE1C00051FE54 /* SubscriptionContainerView.swift */; };
+		CB9649B925ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9649B625ADE1C00051FE54 /* SubscriptionContainerView.swift */; };
 		CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBA119632589DFCA001ACFA6 /* NoteHub.xcdatamodeld */; };
 		CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */; };
@@ -120,6 +132,8 @@
 		CB3167A72591C79C00291DF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB3167AB2591C7A500291DF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTab.swift; sourceTree = "<group>"; };
+		CB405CB125AD9ACE00370D87 /* SubscriptionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTitleView.swift; sourceTree = "<group>"; };
+		CB405CB925AD9B0100370D87 /* InformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailView.swift; sourceTree = "<group>"; };
 		CB57C6C1258F34B500389C1E /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
 		CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 		CB5CA24F25A779C800CD3B71 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -135,6 +149,8 @@
 		CB720F71258C58CB001B65DC /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		CB720F76258C58FA001B65DC /* NoteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetails.swift; sourceTree = "<group>"; };
 		CB8982782590DA1200830577 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		CB9649AE25ADDAFD0051FE54 /* SubscriptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionButton.swift; sourceTree = "<group>"; };
+		CB9649B625ADE1C00051FE54 /* SubscriptionContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionContainerView.swift; sourceTree = "<group>"; };
 		CBA119642589DFCA001ACFA6 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHubApp.swift; sourceTree = "<group>"; };
 		CBA119662589DFCA001ACFA6 /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
@@ -234,7 +250,11 @@
 				CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */,
 				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
 				CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */,
+				CB9649B625ADE1C00051FE54 /* SubscriptionContainerView.swift */,
+				CB405CB125AD9ACE00370D87 /* SubscriptionTitleView.swift */,
+				CB405CB925AD9B0100370D87 /* InformationDetailView.swift */,
 				CBE4638A25A8229A0033C31F /* CustomAlert.swift */,
+				CB9649AE25ADDAFD0051FE54 /* SubscriptionButton.swift */,
 				CBDA3DF625947E84005A24EC /* SettingsStore.swift */,
 				CB698020258F4D0B00E3C49E /* RootView.swift */,
 				CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */,
@@ -503,13 +523,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9649AF25ADDAFD0051FE54 /* SubscriptionButton.swift in Sources */,
 				CB720F77258C58FA001B65DC /* NoteDetails.swift in Sources */,
 				CB720F6B258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA119792589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CB8982792590DA1200830577 /* TabBar.swift in Sources */,
+				CB405CB225AD9ACE00370D87 /* SubscriptionTitleView.swift in Sources */,
 				CB5CA24825A770EB00CD3B71 /* SubscriptionView.swift in Sources */,
 				CBD5AF0E25A06E2D0090FB9F /* LoadingView.swift in Sources */,
 				CB720F72258C58CB001B65DC /* NoteItem.swift in Sources */,
+				CB405CBA25AD9B0100370D87 /* InformationDetailView.swift in Sources */,
 				CBA1197F2589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
@@ -521,6 +544,7 @@
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
+				CB9649B725ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */,
 				CB698023258F4D4900E3C49E /* RootView.swift in Sources */,
 				CBE4638B25A8229A0033C31F /* CustomAlert.swift in Sources */,
 			);
@@ -530,13 +554,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9649B025ADDAFD0051FE54 /* SubscriptionButton.swift in Sources */,
 				CB720F78258C58FA001B65DC /* NoteDetails.swift in Sources */,
 				CB720F6C258C5809001B65DC /* TrashList.swift in Sources */,
 				CBA1197A2589DFCD001ACFA6 /* NoteHub.xcdatamodeld in Sources */,
 				CBDA3DF825947E84005A24EC /* SettingsStore.swift in Sources */,
+				CB405CB325AD9ACE00370D87 /* SubscriptionTitleView.swift in Sources */,
 				CB5CA24925A770EB00CD3B71 /* SubscriptionView.swift in Sources */,
 				CBD5AF0F25A06E2D0090FB9F /* LoadingView.swift in Sources */,
 				CB720F73258C58CB001B65DC /* NoteItem.swift in Sources */,
+				CB405CBB25AD9B0100370D87 /* InformationDetailView.swift in Sources */,
 				CBA119802589DFCD001ACFA6 /* Persistence.swift in Sources */,
 				CB38EDD125A6BEE30053BFA3 /* TabBar.swift in Sources */,
 				CB69801B258F4CDD00E3C49E /* SettingsView.swift in Sources */,
@@ -548,6 +575,7 @@
 				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CBF3B8E125A57E4600D84D05 /* Note+CoreDataClass.swift in Sources */,
 				CB698022258F4D4900E3C49E /* RootView.swift in Sources */,
+				CB9649B825ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */,
 				CB65DCE525A4105300769A57 /* Note+CoreDataProperties.swift in Sources */,
 				CBE4638C25A8229A0033C31F /* CustomAlert.swift in Sources */,
 			);
@@ -557,13 +585,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9649B125ADDAFD0051FE54 /* SubscriptionButton.swift in Sources */,
 				CBF3B8F325A57E5C00D84D05 /* NoteHubApp.swift in Sources */,
 				CBF3B8F925A57E6700D84D05 /* SettingsView.swift in Sources */,
 				CBF3B94725A57E9D00D84D05 /* TabBar.swift in Sources */,
 				CBF3B96A25A5837300D84D05 /* RootView.swift in Sources */,
+				CB405CB425AD9ACE00370D87 /* SubscriptionTitleView.swift in Sources */,
 				CB5CA24A25A770EB00CD3B71 /* SubscriptionView.swift in Sources */,
 				CBF3B92F25A57E8600D84D05 /* Modifier.swift in Sources */,
 				CBF3B91725A57E7900D84D05 /* TrashList.swift in Sources */,
+				CB405CBC25AD9B0100370D87 /* InformationDetailView.swift in Sources */,
 				CBF3B93525A57E8B00D84D05 /* NoteHub.xcdatamodeld in Sources */,
 				CBF3B90B25A57E7200D84D05 /* LoadingView.swift in Sources */,
 				CBF3B92925A57E8300D84D05 /* CreateNote.swift in Sources */,
@@ -575,6 +606,7 @@
 				CBF3B91D25A57E7C00D84D05 /* NoteItem.swift in Sources */,
 				CBF3B7F425A57A6000D84D05 /* ComplicationController.swift in Sources */,
 				CBF3B8E725A57E4B00D84D05 /* Note+CoreDataProperties.swift in Sources */,
+				CB9649B925ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */,
 				CBF3B91125A57E7600D84D05 /* NoteList.swift in Sources */,
 				CBE4638D25A8229A0033C31F /* CustomAlert.swift in Sources */,
 			);
