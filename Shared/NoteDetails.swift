@@ -12,7 +12,7 @@ import SwiftUI
 
 struct NoteDetails: View {
     @Environment(\.managedObjectContext) private var moc
-    @Environment(\.presentationMode) private var presentationMode
+//    @Environment(\.presentationMode) private var presentationMode
     
     @State private var textNote: String = ""
     @State private var isPin: Bool = false
@@ -36,12 +36,12 @@ struct NoteDetails: View {
         }
     }
     
-    private func deleteNote() {
-        note.isDelete = true
+    private func deleteOrRestoreNote(_ value: Bool) {
+        note.isDelete = value
         note.isPin = false
         do {
             try moc.save()
-            presentationMode.wrappedValue.dismiss()
+//            presentationMode.wrappedValue.dismiss()
         } catch {
             let nsError = error as NSError
             print("Unresolved error \(nsError), \(nsError.userInfo)")
@@ -75,14 +75,10 @@ struct NoteDetails: View {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
                         Section {
-                            Text(note.createDate, style: .date)
-                            Text(note.changeDate, style: .date)
-                        }
-                        Section {
                             Button(action: { setPin(note.isPin ? false : true) }) {
                                 Label(isPin ? "Открепить" : "Закрепить", systemImage: isPin ? "pin.slash" : "pin")
                             }
-                            Button(action: deleteNote) {
+                            Button(action: { deleteOrRestoreNote(true) }) {
                                 Label("Удалить заметку", systemImage: "trash")
                             }
                         }
