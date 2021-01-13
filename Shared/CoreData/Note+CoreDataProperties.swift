@@ -16,7 +16,6 @@ public extension Note {
 
     @NSManaged var changeDate: Date
     @NSManaged var createDate: Date
-    @NSManaged var id: UUID
     @NSManaged var isDelete: Bool
     @NSManaged var isPin: Bool
     @NSManaged var textNote: String

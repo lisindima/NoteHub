@@ -17,7 +17,6 @@ struct CreateNote: View {
     
     private func saveNote() {
         let note = Note(context: moc)
-        note.id = UUID()
         note.createDate = Date()
         note.changeDate = Date()
         note.isPin = false

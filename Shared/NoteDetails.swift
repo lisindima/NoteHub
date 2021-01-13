@@ -13,9 +13,11 @@ import SwiftUI
 struct NoteDetails: View {
     @Environment(\.managedObjectContext) private var moc
 //    @Environment(\.presentationMode) private var presentationMode
+//    Пропадает кнопка "Назад"
     
     @State private var textNote: String = ""
     @State private var isPin: Bool = false
+    @State private var isDelete: Bool = false
     
     var note: Note
     
@@ -23,6 +25,7 @@ struct NoteDetails: View {
         self.note = note
         _textNote = State<String>(initialValue: note.textNote)
         _isPin = State<Bool>(initialValue: note.isPin)
+        _isDelete = State<Bool>(initialValue: note.isDelete)
     }
     
     private func saveNote() {
@@ -37,6 +40,7 @@ struct NoteDetails: View {
     }
     
     private func deleteOrRestoreNote(_ value: Bool) {
+        isDelete = value
         note.isDelete = value
         note.isPin = false
         do {
@@ -49,6 +53,7 @@ struct NoteDetails: View {
     }
     
     private func setPin(_ value: Bool) {
+        isPin = value
         note.isPin = value
         do {
             try moc.save()
@@ -75,11 +80,17 @@ struct NoteDetails: View {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
                         Section {
-                            Button(action: { setPin(note.isPin ? false : true) }) {
-                                Label(isPin ? "Открепить" : "Закрепить", systemImage: isPin ? "pin.slash" : "pin")
+                            Button(action: { setPin(isPin ? false : true) }) {
+                                Label(
+                                    isPin ? "Открепить" : "Закрепить",
+                                    systemImage: isPin ? "pin.slash" : "pin"
+                                )
                             }
-                            Button(action: { deleteOrRestoreNote(true) }) {
-                                Label("Удалить заметку", systemImage: "trash")
+                            Button(action: { deleteOrRestoreNote(isDelete ? false : true) }) {
+                                Label(
+                                    isDelete ? "Восстановить заметку" : "Удалить заметку",
+                                    systemImage: isDelete ? "trash.slash" : "trash"
+                                )
                             }
                         }
                     }

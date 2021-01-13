@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct TabBar: View {
-    @State private var openSettings: Bool = false
-    
     var body: some View {
         NavigationView {
             List {
@@ -19,22 +17,10 @@ struct TabBar: View {
             .navigationTitle("NoteHub")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: { openSettings = true }) {
+                    NavigationLink(destination: SettingsView()) {
                         Image(systemName: "gear")
                             .imageScale(.large)
                     }
-                }
-            }
-            .sheet(isPresented: $openSettings) {
-                NavigationView {
-                    SettingsView()
-                        .toolbar {
-                            ToolbarItem(placement: .primaryAction) {
-                                Button(action: { openSettings = false }) {
-                                    Text("close")
-                                }
-                            }
-                        }
                 }
             }
         }

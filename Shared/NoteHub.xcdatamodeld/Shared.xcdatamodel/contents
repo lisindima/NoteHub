@@ -3,12 +3,11 @@
     <entity name="Note" representedClassName="Note" syncable="YES">
         <attribute name="changeDate" attributeType="Date" defaultDateTimeInterval="-978332400" usesScalarValueType="NO"/>
         <attribute name="createDate" attributeType="Date" defaultDateTimeInterval="-978332400" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isDelete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isPin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="textNote" attributeType="String" defaultValueString="Empty"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Note" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

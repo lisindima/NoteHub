@@ -17,7 +17,6 @@ struct PersistenceController {
             let newItem = Note(context: viewContext)
             newItem.createDate = Date()
             newItem.changeDate = Date()
-            newItem.id = UUID()
             newItem.isDelete = false
             newItem.isPin = false
             newItem.textNote = "Заметка"
