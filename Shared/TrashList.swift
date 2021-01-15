@@ -35,7 +35,7 @@ struct TrashList: View {
         LoadingView(notes, title: "Корзина пуста", subTitle: "Что то еще дописать....") { notes in
             List {
                 ForEach(notes.filter {
-                    searchText.isEmpty || $0.textNote.localizedStandardContains(searchText)
+                    searchText.isEmpty || $0.textNote!.localizedStandardContains(searchText)
                 }, id: \.id) { note in
                     NavigationLink(destination: NoteDetails(note: note)) {
                         NoteItem(note: note)

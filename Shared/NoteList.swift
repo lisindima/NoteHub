@@ -39,7 +39,7 @@ struct NoteList: View {
         LoadingView(notes, title: "Нет заметок", subTitle: "Что то еще дописать....") { notes in
             List {
                 ForEach(notes.filter {
-                    searchText.isEmpty || $0.textNote.localizedStandardContains(searchText)
+                    searchText.isEmpty || $0.textNote!.localizedStandardContains(searchText)
                 }, id: \.id) { note in
                     NavigationLink(destination: NoteDetails(note: note)) {
                         NoteItem(note: note)

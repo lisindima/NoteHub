@@ -23,19 +23,22 @@ struct NoteDetails: View {
     
     init(note: Note) {
         self.note = note
-        _textNote = State<String>(initialValue: note.textNote)
+        _textNote = State<String>(initialValue: note.textNote ?? "")
         _isPin = State<Bool>(initialValue: note.isPin)
         _isDelete = State<Bool>(initialValue: note.isDelete)
     }
     
     private func saveNote() {
-        note.changeDate = Date()
-        note.textNote = textNote
-        do {
-            try moc.save()
-        } catch {
-            let nsError = error as NSError
-            print("Unresolved error \(nsError), \(nsError.userInfo)")
+        if textNote != note.textNote {
+            print("Обнова")
+            note.changeDate = Date()
+            note.textNote = textNote
+            do {
+                try moc.save()
+            } catch {
+                let nsError = error as NSError
+                print("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
         }
     }
     

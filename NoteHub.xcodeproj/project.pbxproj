@@ -30,9 +30,6 @@
 		CB5CA25025A779C800CD3B71 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5CA24F25A779C800CD3B71 /* StoreKit.framework */; };
 		CB5CA25225A779D900CD3B71 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5CA25125A779D900CD3B71 /* StoreKit.framework */; };
 		CB5CA25525A779F300CD3B71 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5CA25425A779F300CD3B71 /* CloudKit.framework */; };
-		CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */; };
-		CB65DCE225A4104D00769A57 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */; };
-		CB65DCE525A4105300769A57 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */; };
 		CB698011258F4CA800E3C49E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698010258F4CA800E3C49E /* SideBar.swift */; };
 		CB698012258F4CA800E3C49E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698010258F4CA800E3C49E /* SideBar.swift */; };
 		CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698019258F4CDD00E3C49E /* SettingsView.swift */; };
@@ -81,9 +78,6 @@
 		CBF3B7F425A57A6000D84D05 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF3B7F325A57A6000D84D05 /* ComplicationController.swift */; };
 		CBF3B7F625A57A6100D84D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF3B7F525A57A6100D84D05 /* Assets.xcassets */; };
 		CBF3B7F925A57A6100D84D05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF3B7F825A57A6100D84D05 /* Preview Assets.xcassets */; };
-		CBF3B8DB25A57E4200D84D05 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */; };
-		CBF3B8E125A57E4600D84D05 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */; };
-		CBF3B8E725A57E4B00D84D05 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */; };
 		CBF3B8ED25A57E5000D84D05 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119672589DFCA001ACFA6 /* Persistence.swift */; };
 		CBF3B8F325A57E5C00D84D05 /* NoteHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */; };
 		CBF3B8F925A57E6700D84D05 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB698019258F4CDD00E3C49E /* SettingsView.swift */; };
@@ -140,8 +134,6 @@
 		CB5CA25125A779D900CD3B71 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CB5CA25325A779EC00CD3B71 /* NoteHub (watchOS Extension).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NoteHub (watchOS Extension).entitlements"; sourceTree = "<group>"; };
 		CB5CA25425A779F300CD3B71 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
-		CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB698010258F4CA800E3C49E /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		CB698019258F4CDD00E3C49E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CB698020258F4D0B00E3C49E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -217,16 +209,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB9018592597854F00C18DE3 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				CB65DCDF25A4104D00769A57 /* Note+CoreDataClass.swift */,
-				CB65DCE025A4104D00769A57 /* Note+CoreDataProperties.swift */,
-				CBA119672589DFCA001ACFA6 /* Persistence.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		CBA1195D2589DFCA001ACFA6 = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +225,8 @@
 		CBA119622589DFCA001ACFA6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CB9018592597854F00C18DE3 /* CoreData */,
 				CBA119652589DFCA001ACFA6 /* NoteHubApp.swift */,
+				CBA119672589DFCA001ACFA6 /* Persistence.swift */,
 				CB698010258F4CA800E3C49E /* SideBar.swift */,
 				CB8982782590DA1200830577 /* TabBar.swift */,
 				CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */,
@@ -537,12 +519,10 @@
 				CB69801A258F4CDD00E3C49E /* SettingsView.swift in Sources */,
 				CBA1197B2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */,
-				CB65DCE225A4104D00769A57 /* Note+CoreDataProperties.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CBDA3DF725947E84005A24EC /* SettingsStore.swift in Sources */,
 				CB38EDD825A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
-				CB65DCE125A4104D00769A57 /* Note+CoreDataClass.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
 				CB9649B725ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */,
 				CB698023258F4D4900E3C49E /* RootView.swift in Sources */,
@@ -573,10 +553,8 @@
 				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB38EDD925A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,
-				CBF3B8E125A57E4600D84D05 /* Note+CoreDataClass.swift in Sources */,
 				CB698022258F4D4900E3C49E /* RootView.swift in Sources */,
 				CB9649B825ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */,
-				CB65DCE525A4105300769A57 /* Note+CoreDataProperties.swift in Sources */,
 				CBE4638C25A8229A0033C31F /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,14 +576,12 @@
 				CBF3B93525A57E8B00D84D05 /* NoteHub.xcdatamodeld in Sources */,
 				CBF3B90B25A57E7200D84D05 /* LoadingView.swift in Sources */,
 				CBF3B92925A57E8300D84D05 /* CreateNote.swift in Sources */,
-				CBF3B8DB25A57E4200D84D05 /* Note+CoreDataClass.swift in Sources */,
 				CBF3B8FF25A57E6A00D84D05 /* SettingsStore.swift in Sources */,
 				CBF3B8ED25A57E5000D84D05 /* Persistence.swift in Sources */,
 				CBF3B92325A57E7F00D84D05 /* NoteDetails.swift in Sources */,
 				CB38EDDA25A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CBF3B91D25A57E7C00D84D05 /* NoteItem.swift in Sources */,
 				CBF3B7F425A57A6000D84D05 /* ComplicationController.swift in Sources */,
-				CBF3B8E725A57E4B00D84D05 /* Note+CoreDataProperties.swift in Sources */,
 				CB9649B925ADE1C00051FE54 /* SubscriptionContainerView.swift in Sources */,
 				CBF3B91125A57E7600D84D05 /* NoteList.swift in Sources */,
 				CBE4638D25A8229A0033C31F /* CustomAlert.swift in Sources */,

@@ -12,11 +12,15 @@ struct NoteItem: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(note.textNote)
-                .fontWeight(.semibold)
-                .lineLimit(2)
-            Text(note.createDate, style: .relative)
-                .font(.caption2)
+            if let textNote = note.textNote {
+                Text(textNote)
+                    .fontWeight(.semibold)
+                    .lineLimit(2)
+            }
+            if let createDate = note.createDate {
+                Text(createDate, style: .relative)
+                    .font(.caption2)
+            }
         }
     }
 }
