@@ -30,7 +30,6 @@ struct NoteDetails: View {
     
     private func saveNote() {
         if textNote != note.textNote {
-            print("Обнова")
             note.changeDate = Date()
             note.textNote = textNote
             do {
