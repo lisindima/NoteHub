@@ -73,7 +73,6 @@
 		CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
 		CBEE4FDA25930E430090DD9F /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE4FD825930E430090DD9F /* Modifier.swift */; };
 		CBEE4FDF25931BDE0090DD9F /* NativeSearchBar in Frameworks */ = {isa = PBXBuildFile; productRef = CBEE4FDE25931BDE0090DD9F /* NativeSearchBar */; };
-		CBF3B7E425A57A6000D84D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF3B7E325A57A6000D84D05 /* Assets.xcassets */; };
 		CBF3B7EB25A57A6000D84D05 /* NoteHub (watchOS Extension).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CBF3B7EA25A57A6000D84D05 /* NoteHub (watchOS Extension).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CBF3B7F425A57A6000D84D05 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF3B7F325A57A6000D84D05 /* ComplicationController.swift */; };
 		CBF3B7F625A57A6100D84D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF3B7F525A57A6100D84D05 /* Assets.xcassets */; };
@@ -161,7 +160,6 @@
 		CBE4638A25A8229A0033C31F /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		CBEE4FD825930E430090DD9F /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		CBF3B7DE25A57A5E00D84D05 /* NoteHub (watchOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoteHub (watchOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF3B7E325A57A6000D84D05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBF3B7E525A57A6000D84D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBF3B7EA25A57A6000D84D05 /* NoteHub (watchOS Extension).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NoteHub (watchOS Extension).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF3B7F325A57A6000D84D05 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 		CBF3B7E225A57A5E00D84D05 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				CBF3B7E325A57A6000D84D05 /* Assets.xcassets */,
 				CBF3B7E525A57A6000D84D05 /* Info.plist */,
 			);
 			path = watchOS;
@@ -483,7 +480,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBF3B7E425A57A6000D84D05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
