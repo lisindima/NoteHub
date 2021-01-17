@@ -41,4 +41,3 @@ struct SubscriptionButton: View {
         #endif
     }
 }
-

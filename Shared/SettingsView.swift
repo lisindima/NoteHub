@@ -8,32 +8,30 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject private var settingsStore: SettingsStore
-    
     @State private var openSubscriptionView: Bool = false
     
     private func openAboutApp() {}
     
+    var versionApp: String {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+        return "\(version) (\(build))"
+    }
+    
     var body: some View {
         Form {
-            Section {
-                Button(action: { openSubscriptionView = true }) {
-                    Label("Обновление до NoteHub Plus", systemImage: "plus.app.fill")
+            Section(header: Text("Подписка")) {
+                LabelButton("Обновление до NoteHub Plus", systemName: "plus.app.fill") {
+                    openSubscriptionView = true
                 }
-                .buttonStyle(PlainButtonStyle())
             }
             #if !os(watchOS)
-            Section(header: Text("Кастомизация")) {
-                ColorPicker(selection: $settingsStore.accentColor, supportsOpacity: true) {
-                    Label("Цветовой акцент", systemImage: "paintbrush")
-                }
+            NavigationLink(destination: CustomizationView()) {
+                Label("Кастомизация", systemImage: "paintbrush")
             }
             #endif
-            Section {
-                Button(action: openAboutApp) {
-                    Label("О приложении", systemImage: "info.circle")
-                }
-                .buttonStyle(PlainButtonStyle())
+            Section(footer: Text(versionApp)) {
+                LabelButton("О приложении", systemName: "info.circle", action: openAboutApp)
             }
         }
         .navigationTitle("settings")
@@ -46,5 +44,30 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+    }
+}
+
+struct CustomizationView: View {
+    @EnvironmentObject private var settingsStore: SettingsStore
+    
+    @AppStorage(CustomColorScheme.defaultKey) var customColorScheme = CustomColorScheme.defaultValue
+    
+    var body: some View {
+        Form {
+            Section(header: Text("Цветовая схема")) {
+                Picker("Цветовая схема", selection: $customColorScheme) {
+                    Text("Системная").tag(CustomColorScheme.system)
+                    Text("Светлая").tag(CustomColorScheme.light)
+                    Text("Темная").tag(CustomColorScheme.dark)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+            Section(footer: Text("Меняет цветовой акцент во всем приложение.")) {
+                ColorPicker(selection: $settingsStore.accentColor, supportsOpacity: true) {
+                    Label("Цветовой акцент", systemImage: "paintbrush")
+                }
+            }
+        }
+        .navigationTitle("Кастомизация")
     }
 }
