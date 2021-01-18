@@ -5,8 +5,8 @@
 //  Created by Дмитрий Лисин on 16.12.2020.
 //
 
-import SwiftUI
 import Purchases
+import SwiftUI
 
 @main
 struct NoteHubApp: App {

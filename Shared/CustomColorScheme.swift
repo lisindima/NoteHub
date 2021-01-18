@@ -16,7 +16,7 @@ enum CustomColorScheme: Int, CaseIterable, Identifiable, Codable {
     case dark = 2
     
     var id: Int {
-        self.rawValue
+        rawValue
     }
     
     var colorScheme: ColorScheme? {
@@ -50,11 +50,11 @@ struct CustomColorSchemeViewModifier: ViewModifier {
     @State private var tempColorScheme: ColorScheme? = nil
     
     init(_ customColorScheme: Binding<CustomColorScheme>) {
-        self._customColorScheme = customColorScheme
+        _customColorScheme = customColorScheme
     }
     
     func getSystemColorScheme() -> ColorScheme {
-        return UITraitCollection.current.userInterfaceStyle == .light ? .light : .dark
+        UITraitCollection.current.userInterfaceStyle == .light ? .light : .dark
     }
     
     func body(content: Content) -> some View {
@@ -85,6 +85,6 @@ struct CustomColorSchemeViewModifier: ViewModifier {
 
 extension View {
     func customColorScheme(_ customColorScheme: Binding<CustomColorScheme>) -> some View {
-        self.modifier(CustomColorSchemeViewModifier(customColorScheme))
+        modifier(CustomColorSchemeViewModifier(customColorScheme))
     }
 }

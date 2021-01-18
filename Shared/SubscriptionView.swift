@@ -5,8 +5,8 @@
 //  Created by Дмитрий Лисин on 07.01.2021.
 //
 
-import SwiftUI
 import Purchases
+import SwiftUI
 
 struct SubscriptionView: View {
     @State private var yearPrice: String = ""
@@ -32,7 +32,7 @@ struct SubscriptionView: View {
     }
     
     private func buySubscription(_ package: Purchases.Package) {
-        Purchases.shared.purchasePackage(package) { transaction, purchaserInfo, error, userCancelled in
+        Purchases.shared.purchasePackage(package) { _, purchaserInfo, _, _ in
             if purchaserInfo?.entitlements.active != nil {
                 alertItem = AlertItem(title: "Успешно", message: "Подписка оформлена")
             }
