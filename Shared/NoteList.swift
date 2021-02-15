@@ -38,13 +38,10 @@ struct NoteList: View {
     var body: some View {
         LoadingView(notes, title: "Нет заметок", subTitle: "Что то еще дописать....") { notes in
             List {
-                ForEach(notes.filter {
-                    searchText.isEmpty || $0.textNote!.localizedStandardContains(searchText)
-                }, id: \.id) { note in
-                    NavigationLink(destination: NoteDetails(note: note)) {
-                        NoteItem(note: note)
-                    }
-                }
+                ForEach(
+                    notes.filter { searchText.isEmpty || $0.textNote!.localizedStandardContains(searchText) },
+                    content: NoteItem.init
+                )
                 .onDelete(perform: deleteNote)
             }
             .modifier(ListStyle())

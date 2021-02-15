@@ -11,15 +11,17 @@ struct NoteItem: View {
     @ObservedObject var note: Note
     
     var body: some View {
-        VStack(alignment: .leading) {
-            if let textNote = note.textNote {
-                Text(textNote)
-                    .fontWeight(.semibold)
-                    .lineLimit(2)
-            }
-            if let createDate = note.createDate {
-                Text(createDate, style: .relative)
-                    .font(.caption2)
+        NavigationLink(destination: NoteDetails(note: note)) {
+            VStack(alignment: .leading) {
+                if let textNote = note.textNote {
+                    Text(textNote)
+                        .fontWeight(.semibold)
+                        .lineLimit(2)
+                }
+                if let createDate = note.createDate {
+                    Text(createDate, style: .relative)
+                        .font(.caption2)
+                }
             }
         }
     }
