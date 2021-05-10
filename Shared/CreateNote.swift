@@ -5,10 +5,8 @@
 //  Created by Дмитрий Лисин on 20.12.2020.
 //
 
-#if !os(watchOS)
-import HighlightedTextEditor
-#endif
 import SwiftUI
+import SwiftDown
 
 struct CreateNote: View {
     @Environment(\.managedObjectContext) private var moc
@@ -31,12 +29,10 @@ struct CreateNote: View {
     }
     
     var body: some View {
-        #if !os(watchOS)
-        HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
-            .padding(.horizontal, 6)
+        SwiftDownEditor(text: $textNote)
+            .edgesIgnoringSafeArea(.bottom)
             .navigationTitle("Новая заметка")
             .modifier(NavigationTitleStyle())
             .onDisappear(perform: saveNote)
-        #endif
     }
 }

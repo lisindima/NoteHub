@@ -13,20 +13,6 @@ struct InformationDetailView: View {
     var imageName: String
     
     var body: some View {
-        #if os(watchOS)
-        HStack {
-            Image(systemName: imageName)
-                .frame(width: 24)
-                .foregroundColor(.accentColor)
-            VStack(alignment: .leading) {
-                Text(title)
-                    .foregroundColor(.primary)
-                Text(subTitle)
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
-            }
-        }
-        #else
         HStack {
             Image(systemName: imageName)
                 .foregroundColor(.accentColor)
@@ -40,6 +26,5 @@ struct InformationDetailView: View {
                     .foregroundColor(.secondary)
             }
         }
-        #endif
     }
 }

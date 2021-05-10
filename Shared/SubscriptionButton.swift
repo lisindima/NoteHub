@@ -15,15 +15,6 @@ struct SubscriptionButton: View {
     var action: () -> Void
     
     var body: some View {
-        #if os(watchOS)
-        Button(action: action) {
-            VStack {
-                Text(title)
-                    .fontWeight(.bold)
-                Text(subTitle)
-            }
-        }
-        #else
         Button(action: action) {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
@@ -38,6 +29,5 @@ struct SubscriptionButton: View {
                 }
             }
         }
-        #endif
     }
 }

@@ -5,10 +5,8 @@
 //  Created by Дмитрий Лисин on 18.12.2020.
 //
 
-#if !os(watchOS)
-import HighlightedTextEditor
-#endif
 import SwiftUI
+import SwiftDown
 
 struct NoteDetails: View {
     @Environment(\.managedObjectContext) private var moc
@@ -66,17 +64,7 @@ struct NoteDetails: View {
     }
     
     var body: some View {
-        #if os(watchOS)
-        ScrollView {
-            HStack {
-                Text(note.textNote)
-                    .font(.caption)
-                Spacer()
-            }
-        }
-        .onDisappear(perform: saveNote)
-        #else
-        HighlightedTextEditor(text: $textNote, highlightRules: .markdown)
+        SwiftDownEditor(text: $textNote)
             .onDisappear(perform: saveNote)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -103,6 +91,5 @@ struct NoteDetails: View {
                 }
             }
             .modifier(NavigationTitleStyle())
-        #endif
     }
 }

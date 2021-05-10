@@ -9,21 +9,6 @@ import SwiftUI
 
 struct SubscriptionTitleView: View {
     var body: some View {
-        #if os(watchOS)
-        VStack {
-            Image(systemName: "plus.app.fill")
-                .resizable()
-                .frame(width: 30, height: 30)
-                .foregroundColor(.accentColor)
-            HStack {
-                Text("NoteHub")
-                    .fontWeight(.bold)
-                Text("Plus")
-                    .fontWeight(.bold)
-                    .foregroundColor(.accentColor)
-            }
-        }
-        #else
         VStack {
             Image(systemName: "plus.app.fill")
                 .resizable()
@@ -44,6 +29,5 @@ struct SubscriptionTitleView: View {
                 .padding(.top)
                 .padding(.horizontal)
         }
-        #endif
     }
 }

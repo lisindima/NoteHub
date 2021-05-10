@@ -52,52 +52,6 @@ struct SubscriptionView: View {
     }
     
     var body: some View {
-        #if os(watchOS)
-        watch
-        #else
-        other
-        #endif
-    }
-    
-    var watch: some View {
-        ScrollView {
-            SubscriptionTitleView()
-                .padding(.bottom)
-            SubscriptionContainerView()
-                .padding(.bottom)
-            if let monthly = offering?.monthly {
-                SubscriptionButton(
-                    title: "Ежемесячно",
-                    subTitle: mountlyPrice,
-                    colorButton: Color.accentColor.opacity(0.2),
-                    colorText: .accentColor,
-                    action: { buySubscription(monthly) }
-                )
-            }
-            if let annual = offering?.annual {
-                SubscriptionButton(
-                    title: "Ежегодно",
-                    subTitle: yearPrice,
-                    colorButton: .accentColor,
-                    colorText: .white,
-                    action: { buySubscription(annual) }
-                )
-            }
-            Button(action: restoreSubscription) {
-                Text("Восстановить платеж")
-                    .font(.footnote)
-            }
-            .padding(.top)
-            Link("Политика", destination: URL(string: "https://apple.com")!)
-                .font(.footnote)
-            Link("Правила", destination: URL(string: "https://apple.com")!)
-                .font(.footnote)
-        }
-        .onAppear(perform: fetchProduct)
-        .customAlert(item: $alertItem)
-    }
-    
-    var other: some View {
         VStack {
             ScrollView {
                 SubscriptionTitleView()

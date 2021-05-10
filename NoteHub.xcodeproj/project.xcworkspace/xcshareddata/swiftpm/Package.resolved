@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "HighlightedTextEditor",
-        "repositoryURL": "https://github.com/kyle-n/HighlightedTextEditor",
+        "package": "Down",
+        "repositoryURL": "https://github.com/johnxnguyen/Down.git",
         "state": {
           "branch": null,
-          "revision": "710bb6f99f3f1fa1db4d14c3fdd399b2df3b1fb3",
-          "version": "1.7.0"
+          "revision": "f34b166be1f1db4aa8f573067e901d72f2a6be57",
+          "version": "0.11.0"
         }
       },
       {
@@ -24,8 +24,17 @@
         "repositoryURL": "https://github.com/RevenueCat/purchases-ios",
         "state": {
           "branch": null,
-          "revision": "4c299160274864036f96da3184bbde90d779fc43",
-          "version": "3.10.3"
+          "revision": "2811b25d8f275429e5d001e3990426ebba5147f4",
+          "version": "3.11.1"
+        }
+      },
+      {
+        "package": "SwiftDown",
+        "repositoryURL": "https://github.com/qeude/SwiftDown",
+        "state": {
+          "branch": null,
+          "revision": "f2879f474d4015548a99686fa97652cf9f3fe1a0",
+          "version": "0.2.0"
         }
       }
     ]

@@ -25,11 +25,9 @@ struct SettingsView: View {
                     openSubscriptionView = true
                 }
             }
-            #if !os(watchOS)
             NavigationLink(destination: CustomizationView()) {
                 Label("Кастомизация", systemImage: "paintbrush")
             }
-            #endif
             Section(footer: Text(versionApp)) {
                 LabelButton("О приложении", systemName: "info.circle", action: openAboutApp)
             }
