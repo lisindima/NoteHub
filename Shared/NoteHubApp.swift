@@ -10,8 +10,7 @@ import SwiftUI
 
 @main
 struct NoteHubApp: App {
-    @StateObject private var settingsStore = SettingsStore.shared
-    @AppStorage(CustomColorScheme.defaultKey) var customColorScheme = CustomColorScheme.defaultValue
+    @StateObject private var settingsStore = SettingsStore()
     
     let persistenceController = PersistenceController.shared
     
@@ -24,7 +23,6 @@ struct NoteHubApp: App {
         WindowGroup {
             RootView()
                 .accentColor(settingsStore.accentColor)
-                .customColorScheme($customColorScheme)
                 .environmentObject(settingsStore)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

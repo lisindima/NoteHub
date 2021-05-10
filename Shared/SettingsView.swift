@@ -12,10 +12,10 @@ struct SettingsView: View {
     
     private func openAboutApp() {}
     
-    var versionApp: String {
+    var versionApp: Text {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
         let build = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
-        return "\(version) (\(build))"
+        return Text("\(version) (\(build))")
     }
     
     var body: some View {
@@ -28,7 +28,7 @@ struct SettingsView: View {
             NavigationLink(destination: CustomizationView()) {
                 Label("Кастомизация", systemImage: "paintbrush")
             }
-            Section(footer: Text(versionApp)) {
+            Section(footer: versionApp) {
                 LabelButton("О приложении", systemName: "info.circle", action: openAboutApp)
             }
         }
@@ -48,18 +48,8 @@ struct SettingsView_Previews: PreviewProvider {
 struct CustomizationView: View {
     @EnvironmentObject private var settingsStore: SettingsStore
     
-    @AppStorage(CustomColorScheme.defaultKey) var customColorScheme = CustomColorScheme.defaultValue
-    
     var body: some View {
         Form {
-            Section(header: Text("Цветовая схема")) {
-                Picker("Цветовая схема", selection: $customColorScheme) {
-                    Text("Системная").tag(CustomColorScheme.system)
-                    Text("Светлая").tag(CustomColorScheme.light)
-                    Text("Темная").tag(CustomColorScheme.dark)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-            }
             Section(footer: Text("Меняет цветовой акцент во всем приложение.")) {
                 ColorPicker(selection: $settingsStore.accentColor, supportsOpacity: true) {
                     Label("Цветовой акцент", systemImage: "paintbrush")

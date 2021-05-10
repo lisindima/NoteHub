@@ -52,10 +52,9 @@
 		CBA119812589DFCD001ACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA119682589DFCC001ACFA6 /* Assets.xcassets */; };
 		CBA119822589DFCD001ACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA119682589DFCC001ACFA6 /* Assets.xcassets */; };
 		CBAF9A352649892C0059A5D6 /* SwiftDown in Frameworks */ = {isa = PBXBuildFile; productRef = CBAF9A342649892C0059A5D6 /* SwiftDown */; };
+		CBAF9A37264990660059A5D6 /* SwiftDown in Frameworks */ = {isa = PBXBuildFile; productRef = CBAF9A36264990660059A5D6 /* SwiftDown */; };
 		CBB0AD5F25B4133500EA0978 /* LabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0AD5E25B4133500EA0978 /* LabelButton.swift */; };
 		CBB0AD6025B4133500EA0978 /* LabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0AD5E25B4133500EA0978 /* LabelButton.swift */; };
-		CBB0AD6C25B4204800EA0978 /* CustomColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0AD6B25B4204800EA0978 /* CustomColorScheme.swift */; };
-		CBB0AD6D25B4204800EA0978 /* CustomColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0AD6B25B4204800EA0978 /* CustomColorScheme.swift */; };
 		CBCD4B6C258B8A1400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */; };
 		CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */; };
 		CBD5AF0E25A06E2D0090FB9F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5AF0D25A06E2D0090FB9F /* LoadingView.swift */; };
@@ -101,7 +100,6 @@
 		CBA119772589DFCD001ACFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA119782589DFCD001ACFA6 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		CBB0AD5E25B4133500EA0978 /* LabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButton.swift; sourceTree = "<group>"; };
-		CBB0AD6B25B4204800EA0978 /* CustomColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorScheme.swift; sourceTree = "<group>"; };
 		CBCD4B67258B8A0B00FFF109 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		CBCD4B6B258B8A1400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		CBCD4B6D258B8A4400FFF109 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -128,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAF9A37264990660059A5D6 /* SwiftDown in Frameworks */,
 				CBF94D4D2593966A002E3BF9 /* NativeSearchBar in Frameworks */,
 				CB5CA25225A779D900CD3B71 /* StoreKit.framework in Frameworks */,
 				CBCD4B6E258B8A4400FFF109 /* CloudKit.framework in Frameworks */,
@@ -158,7 +157,6 @@
 				CB8982782590DA1200830577 /* TabBar.swift */,
 				CB38EDD725A6C0C80053BFA3 /* SectionTab.swift */,
 				CB698019258F4CDD00E3C49E /* SettingsView.swift */,
-				CBB0AD6B25B4204800EA0978 /* CustomColorScheme.swift */,
 				CB5CA24725A770EA00CD3B71 /* SubscriptionView.swift */,
 				CB9649B625ADE1C00051FE54 /* SubscriptionContainerView.swift */,
 				CB405CB125AD9ACE00370D87 /* SubscriptionTitleView.swift */,
@@ -262,6 +260,7 @@
 			packageProductDependencies = (
 				CBF94D4C2593966A002E3BF9 /* NativeSearchBar */,
 				CB42884F25A2FD5100D35C8B /* Purchases */,
+				CBAF9A36264990660059A5D6 /* SwiftDown */,
 			);
 			productName = "NoteHub (macOS)";
 			productReference = CBA119752589DFCD001ACFA6 /* NoteHub.app */;
@@ -352,7 +351,6 @@
 				CBEE4FD925930E430090DD9F /* Modifier.swift in Sources */,
 				CBA1197D2589DFCD001ACFA6 /* NoteList.swift in Sources */,
 				CBDA3DF725947E84005A24EC /* SettingsStore.swift in Sources */,
-				CBB0AD6C25B4204800EA0978 /* CustomColorScheme.swift in Sources */,
 				CB38EDD825A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CB57C6C2258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB698011258F4CA800E3C49E /* SideBar.swift in Sources */,
@@ -383,7 +381,6 @@
 				CBA1197C2589DFCD001ACFA6 /* NoteHubApp.swift in Sources */,
 				CBEE4FDA25930E430090DD9F /* Modifier.swift in Sources */,
 				CBA1197E2589DFCD001ACFA6 /* NoteList.swift in Sources */,
-				CBB0AD6D25B4204800EA0978 /* CustomColorScheme.swift in Sources */,
 				CB57C6C3258F34B500389C1E /* CreateNote.swift in Sources */,
 				CB38EDD925A6C0C80053BFA3 /* SectionTab.swift in Sources */,
 				CB698012258F4CA800E3C49E /* SideBar.swift in Sources */,
@@ -691,6 +688,11 @@
 			productName = Purchases;
 		};
 		CBAF9A342649892C0059A5D6 /* SwiftDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBAF9A332649892C0059A5D6 /* XCRemoteSwiftPackageReference "SwiftDown" */;
+			productName = SwiftDown;
+		};
+		CBAF9A36264990660059A5D6 /* SwiftDown */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CBAF9A332649892C0059A5D6 /* XCRemoteSwiftPackageReference "SwiftDown" */;
 			productName = SwiftDown;
